@@ -1,0 +1,35 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+  {{ style('AdminPublic/css/style1') }}
+@endsection
+
+
+
+
+@section('main')
+
+
+
+
+
+
+
+Route.on('/').render('AdminViews/layouts/Articles')
+
+
+
+
+@endsection
+
+
+
+@section('javascripts')
+{{ script('AdminPublic/js/vendor/popper.min') }}
+{{ script('AdminPublic/js/vendor/bootstrap.min') }}
+{{ script('AdminPublic/js/vendor/jquery.dataTables.min') }}
+{{ script('AdminPublic/js/vendor/dataTables.bootstrap4.min') }}
+
+{{ script('AdminPublic/js/script4') }}
+@endsection

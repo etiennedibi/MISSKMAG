@@ -1,0 +1,162 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+  {{ style('AdminPublic/css/vendor/bootstrap') }}
+  {{ style('AdminPublic/css/style2') }}
+@endsection
+
+
+
+
+@section('main')
+@set('title','Advertising')
+
+
+
+
+
+
+
+<div class="addPubHeader">
+    <p>ADD NEW PUB</p>
+    <div class="addPubPeriod">
+        <i class="fas fa-ad"></i> New<!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+@if(flashMessage('PubsuccessAdd'))
+    <div class="alert alert-success" role="alert">{{flashMessage('PubsuccessAdd')}}</div>
+@endif
+
+@if(flashMessage('AddFail'))
+    <div class="alert alert-danger" role="alert">{{flashMessage('AddFail')}}</div>
+@endif
+
+<div class="addPubBox">
+
+    <div class="pagePubBox PubBox1">
+        <!-- <p class="pageName">ESPACE 1</p> -->
+        <h4>Home</h4>
+        <img src="" alt="" id="imagePreview1">
+        <form action="{{route('addPub1')}}" method="post" id="file1Form" enctype="multipart/form-data">
+            {{ csrfField() }}
+            <input type="text" name="applicant" id="" placeholder="NOM DU DEMANDEUR">
+            <input type="file" name="posterURL" id="file1">
+            <i class="fas fa-file-image uploadButton1"></i>
+            <input type="image" id="image" alt="Login" src="{{assetsUrl('AdminPublic/image/icons/send.png')}}">
+            <input type="hidden" name="spaceRequested" value="HomePage">
+        </form>
+    </div>
+
+    <div class="pagePubBox pagePubBox1 PubBox2">
+        <!-- <p class="pageName">ESPACE 1</p> -->
+        <h4>Categorie</h4>
+        <img src="" alt="" id="imagePreview2">
+        <form action="{{route('addPub2')}}" method="post" id="file2Form" enctype="multipart/form-data">
+            {{ csrfField() }}
+            <input type="text" name="applicant" id="" placeholder="NOM DU DEMANDEUR">
+            <input type="file" name="posterURL" id="file2">
+            <i class="fas fa-file-image uploadButton2"></i>
+            <input type="image" id="image" alt="Login" src="{{assetsUrl('AdminPublic/image/icons/send.png')}}">
+            <input type="hidden" name="spaceRequested" value="CategoriePage">
+        </form>
+    </div>
+    
+
+</div>
+
+
+<div class="addPubBox">
+
+    <div class="pagePubBox pagePubBox2 PubBox3">
+        <!-- <p class="pageName">ESPACE 1</p> -->
+        <h4>Article</h4>
+        <img src="" alt="" id="imagePreview3">
+        <form action="{{route('addPub3')}}" method="post" id="file3Form" enctype="multipart/form-data">
+            {{ csrfField() }}
+            <input type="text" name="applicant" id="" placeholder="NOM DU DEMANDEUR">
+            <input type="file" name="posterURL" id="file3">
+            <i class="fas fa-file-image uploadButton3"></i>
+            <input type="image" id="image" alt="Login" src="{{assetsUrl('AdminPublic/image/icons/send.png')}}">
+            <input type="hidden" name="spaceRequested" value="ArticleViewerPage">
+        </form>
+    </div>
+
+    <div class="pagePubBox pagePubBox3 PubBox4">
+        <!-- <p class="pageName">ESPACE 1</p> -->
+        <h4>Video</h4>
+        <img src="" alt="" id="imagePreview4">
+        <form action="{{route('addPub4')}}" method="post" id="file4Form" enctype="multipart/form-data">
+            <input type="text" name="applicant" id="" placeholder="NOM DU DEMANDEUR">
+            <input type="file" name="posterURL" id="file4">
+            <i class="fas fa-file-image uploadButton4"></i>
+            <input type="image" id="image" alt="Login" src="{{assetsUrl('AdminPublic/image/icons/send.png')}}">
+            <input type="hidden" name="spaceRequested" value="VideoPage">
+        </form>
+    </div>
+    
+
+</div>
+
+
+
+<div class="addPubHeader">
+    <p>HISTORIC OF PUB</p>
+    <div class="RegisterPeriod">
+        <i class="fas fa-history"></i> Depuis la création
+    </div>
+</div>
+
+
+<div class="listeContainer">
+
+    <div class="container TheList">
+        <table class="table  table-bordered mydatatable" style="width:98%">
+        <thead>
+            <tr>
+                <th>POSTER</th>
+                <th>ENTERTAIMENT</th>
+                <th>PUB SPACE</th>
+                <th>DATE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            @each(pub in allPubs)
+            <tr>
+                <td>
+                    <img src="{{ assetsUrl(pub.posterURL) }}" alt="">
+                </td>
+                <td><p>{{pub.applicant}}</p></td>
+                <td><p>{{pub.spaceRequested}}</p></td>
+                <td><p>{{pub.created_at}}</p></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            @endeach
+        </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+@endsection
+
+
+
+@section('javascripts')
+{{ script('AdminPublic/js/vendor/popper.min') }}
+{{ script('AdminPublic/js/vendor/bootstrap.min') }}
+{{ script('AdminPublic/js/vendor/jquery.dataTables.min') }}
+{{ script('AdminPublic/js/vendor/dataTables.bootstrap4.min') }}
+
+{{ script('AdminPublic/js/script2') }}
+@endsection

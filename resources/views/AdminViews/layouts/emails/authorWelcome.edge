@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mail</title>
+</head>
+
+
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+   body{
+       font-family: 'Muli', sans-serif;
+       font-size: 18px;
+       background: #edeff2;
+       color: #33335a;
+   }
+   .mailBox{
+       width: 600px;
+       background: white;
+       border-radius: 15px;
+       margin: 0 auto;
+   }
+
+
+   .mail-header{
+       height: 80px;
+       background: #f76363;
+       border-radius: 15px 15px 0px 0px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 60px;
+
+   }
+   .mail-header img{
+       height: 50px;
+       width: 50px;
+       border-radius: 100px;
+   }
+
+   .mail-header p{
+       margin-left: 15px;
+      font-size: 25px;
+      font-weight: bold;
+       padding: 0 20px;
+   }
+
+
+   .mail-mainContent{
+       padding: 0 20px;
+   }
+
+   .mail-mainContent h2{
+       margin: 40px 0px;
+       text-align: center;
+   }
+
+   ol > li{
+       margin-bottom: 35px;
+   }
+   ol > li > p{
+       font-weight: bold;
+   }
+
+   ul > li{
+       margin-top: 10px;
+   }
+
+   .admin_link > a{
+       display: flex;
+       height: 40px;
+       width: 130px;
+       margin: 30px auto;
+       border-radius: 20px;
+       background: #f76363;
+       justify-content: center;
+       align-items: center;
+       text-decoration: none;
+       color: white;
+   }
+   
+   
+
+   .mail-footer{
+       height: 170px;
+   }
+   .socialLinks{
+       height: 70px;
+       width: 95%;
+       margin: 0 auto;
+       margin-top: 30px;
+       border-bottom: 1px solid #797e86;
+       font-weight: bold;
+       font-size: 16px;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+   }
+   .socialLink{
+        display: flex;
+       justify-content: space-around;
+       align-items: center;
+   }
+   .socialLink img{
+        height: 35px;
+        width: 35px;
+        margin-right: 15px;
+   }
+
+   .footter_end{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-size: 14px;
+       font-weight: bold;
+   }
+   .footter_end p:last-child{
+       margin-top: -10px;
+   }
+
+
+</style>
+
+
+<body>
+
+    <div class="mailBox">
+
+        <div class="mail-header">
+            <img src="image/icons/question.png" alt="" srcset="">
+            <p>Miss K Mag</p>
+        </div>
+
+        <div class="mail-mainContent">
+
+            <p>🙋 Hi <span style="color: #f76363; font-weight: bold; text-transform: uppercase">{{firtname}}</span> !! we are happy to receive you among us !</p> 
+            <p>you are now leaving the freelance community of  <span style="color: #f76363;">miss K mag</span>  🕶. <br> To start please take note of the usage instructions :</p>
+
+            <h2>Some cool instructions 😜</h2>
+
+            <ol>
+                <li>
+                    <p>😎 write, write, write, but in:</p>
+                    <ul>
+                        <li>respecting the editorial line of miss k mag</li>
+                        <li>by being as productive as possible, and above all by having fun</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <p>you can write to the admin for (with your mail box):</p> 
+                    <ul>
+                        <li>ask questions, on the subject you want (please do not abuse this right 😄)</li>
+                        <li>make proposals on the functioning of the platform</li>
+                        <li>request the addition of a category to the already existing list</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p style="text-align: center;">
+                to execute your tasks, deign to connect to the administration area with your email and this code: <span style="color: #f76363;">{{password}}</span>
+                we advise you to change it after your first connection.
+            </p>
+
+        </div>
+
+        <div class="admin_link">
+            <a href="http://localhost:3333/admin/login">Athors Space</a>
+        </div>
+
+        <p style=" padding: 0 20px;">Have questions? Please, visite the website. If you can't find the answer there, contact us at support@missKmag.io</p>
+
+
+
+        <div class="mail-footer">
+
+            <div class="socialLinks">
+                <div class="socialLink"><img src="image/icons/unnamed.png" alt="" srcset="">Follow Us on Twitter</div>
+                <div class="socialLink"><img src="image/icons/unnamed (1).png" alt="" srcset="">Join Us on Facebook</div>
+            </div>
+
+            <div class="footter_end">
+                <p>Yours, MissKmag Team</p> <p>www.selowinerGoupt.com</p>
+            </div>
+    
+        </div>
+    </div>
+    
+    
+</body>
+</html>

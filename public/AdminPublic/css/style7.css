@@ -1,0 +1,96 @@
+*:focus{
+	outline: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #edeff2;
+}
+
+.covertop{
+    height: 40vh;
+    background: linear-gradient(#0f0301d6, #0f0301d4), url('../image/photos/woman-holding-tomatoes-3213283.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.covertop img{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 100px;
+}
+
+input[type="file"]{
+    width: 60px;
+    border: 1px solid #dee2e6;
+    position: absolute;
+    z-index: -10;
+}
+
+.contentBox{
+    height: 60vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.leftContent{
+    height: 96.3%;
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+}
+.leftContent h3{
+    margin: 0;
+}
+.leftContent textarea{
+    width: 450px;
+    margin-top: 20px;
+    height: 70%;
+    border: 1px solid #dee2e6;;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.rightContent{
+    height: 100%;
+    width: 550px;
+    background: #c3706a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.rightContent h3{
+    margin: 0;
+    margin-top: -15px;
+    margin-bottom: -40px;
+    text-align: center;
+}
+
+.rightContent div{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+input{
+    height: 40px;
+    border: 1px solid #dee2e6;;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.rightContent > div:nth-child(3) > div:nth-child(3) input{
+    width: 50px;
+}

@@ -1,0 +1,463 @@
+*{
+    box-sizing: content-box !important;
+  }
+  
+  
+  
+  .AddArticleHeader{
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var( --font-genral-color);
+  }
+  .AddCategorieButton{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: var(--default-Blanc-color);
+      border-radius: 8px;
+      width: 100px;
+      height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var( --font-important-color);
+  }
+  
+  #addArticleForm{
+      background: var(--default-Blanc-color);
+      padding-bottom: 30px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      border-radius: 8px;
+  }
+  #addArticleForm > div{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      color: var(--font-important-color);
+      font-weight: bold;
+  }
+  #addArticleForm > div input{
+      margin-top: -15px;
+      width: 400px;
+      height: 35px;
+      border: 1px solid #dee2e6;;
+      border-radius: 6px;
+      padding: 0 10px;
+  }
+  
+  
+  #addArticleForm > div:nth-child(2) > div input{
+      width: 400px;
+      height: 35px;
+  }
+  #addArticleForm > div:nth-child(2) > div select{
+      margin-top: -15px;
+      width: 400px;
+      height: 35px;
+      border: 1px solid #dee2e6;;
+      border-radius: 6px;
+      padding: 0 10px;
+      color: var(--font-genral-color);
+  }
+  #addArticleForm > div:nth-child(2) > div select option:hover{
+      background: red;
+  }
+  
+  .image1{
+      margin-top: 25px;
+      width: 420px;
+      height: 300px;
+      border-radius: 6px;
+      background: var(--Pricipal-background-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .image1 i{
+      font-size: 50px;
+      cursor: pointer;
+      color: var(--Important-Background);
+  }
+  .image1 img{
+      width: 420px;
+      height: 300px;
+      border-radius: 6px;
+      cursor: pointer;
+  }
+  #addArticleForm input[type="file"]{
+      width: 60px;
+      border: 1px solid #dee2e6;
+      position: absolute;
+      z-index: -10;
+  }
+  #addArticleForm > div:nth-child(4){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+  }
+  #addArticleForm > div:nth-child(4) > textarea{
+      width: 88%;
+      height: 300px;
+      border: 1px solid #dee2e6;;
+      border-radius: 6px;
+      padding: 20px;
+      color: var(--font-important-color);
+  }
+  
+  /* FOR TINYMCE TEXTAREA */
+  /*.tox-tinymce{
+      border-radius: 6px !important;
+      width: 90% !important;
+      height: 400px !important;
+  }
+  .tox-notifications-container{
+      left: -3000px !important;
+  }
+  .tox-statusbar__branding{
+      display: none;
+  }
+  .tox .tox-mbtn {
+      color: var(--font-important-color) !important;
+  }
+  .tox .tox-tbtn svg {
+      fill: var(--font-important-color) !important;
+  }
+  .tox :not(svg) {
+      color: var(--font-important-color) !important;
+  }*/
+  
+  
+  
+  
+  #addArticleForm > div:nth-child(5){
+      padding-top: 50px;
+  }
+  #addArticleForm > div:nth-child(5) > input[type="submit"]{
+      width: 100px;
+      height: 40px;
+      border: 0px solid #dee2e6;;
+      border-radius: 7px;
+      background-color: var(--Important-Background);
+      color: var(--default-Blanc-color);
+  }
+  
+  
+  
+  
+  
+  .AddcategorieHeader{
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var( --font-genral-color);
+  }
+  .AddarticleButton{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: var(--default-Blanc-color);
+      border-radius: 8px;
+      width: 100px;
+      height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var( --font-important-color);
+  }
+  #addCategorieForm{
+      background: var(--default-Blanc-color);
+      height: 100px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  #addCategorieForm > div:nth-child(2){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: var(--font-important-color);
+      font-weight: bold;
+  }
+  #addCategorieForm > div input{
+      width: 400px;
+      height: 35px;
+      border: 1px solid #dee2e6;;
+      border-radius: 6px;
+      padding: 0 10px;
+      margin-left: 20px;
+  }
+  #addCategorieForm > div:nth-child(3) > input[type="submit"]{
+      width: 100px;
+      height: 40px;
+      border: 0px solid #dee2e6;;
+      border-radius: 7px;
+      background-color: var(--Important-Background);
+      color: var(--default-Blanc-color);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .bestReadHeader{
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var( --font-genral-color);
+  }
+  .bestReadPeriod{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: var(--default-Blanc-color);
+      border-radius: 8px;
+      width: 100px;
+      height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var( --font-important-color);
+  }
+  
+  
+  
+  .statisticsContainer{
+      min-width: 80%;
+      height: 40vh;
+      border-radius: 18px;
+      /* background: var(--default-Blanc-color); */
+      
+      color: var(--font-important-color);
+      margin-bottom: 70px;
+      
+  }
+  
+  .statisticsContainer > div:first-child{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .statisticsContainer div:first-child > img{
+      height: 80px;
+      width: 80px;
+      border-radius: 100px;
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+  .statisticsContainer div:first-child > p{
+      margin-right: 20px;
+      font-size: 12px;
+      font-weight: bold;
+  }
+  .statisticsContainer > p{
+      text-align: center;
+      font-size: 20px;
+      padding: 0 50px;
+      font-weight: bold;
+  }
+  .statisticsContainer > div:last-child{
+      display: flex;
+      justify-content: flex-end;
+  }
+  .statisticsContainer > div:last-child > div{
+      background: #d6d6d8 /*#f7636375*/;
+      border-radius: 5px;
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      margin-top: 0px;
+      padding: 0;
+      
+  }
+  .statisticsContainer > div:last-child div img{
+      height: 60px;
+      width: 60px;
+      margin-top: 0;
+      margin-bottom: -50px;
+      padding: 0;
+  }
+  .statisticsContainer > div:last-child span{
+      font-size: 40px;
+      margin-left: -50px;
+      font-weight: bold;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .listHeader{
+      height: 60px;
+      width: 100%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var( --font-genral-color);
+  }
+  .RegisterPeriod{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: var(--default-Blanc-color);
+      border-radius: 8px;
+      width: 200px;
+      height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var( --font-important-color);
+  }
+  
+  
+  .listeContainer > div,
+  *::before,
+  *::after{
+      box-sizing: border-box !important;
+  }
+  
+  .listeContainer{
+      margin-top: 10px;
+      margin-bottom: 50px;
+  }
+  
+  .TheList{
+      background: var(--default-Blanc-color);
+      padding-top: 30px;
+      padding-bottom: 20px;
+      border-radius: 10px;
+      color: var( --font-genral-color);
+  }
+  .dataTables_wrapper .row:first-child{
+      flex-wrap: nowrap !important;
+      align-items: center;
+      margin: 0;
+  }
+  .dataTables_length{
+      text-align: center;
+  }
+  .dataTables_filter{
+      text-align: center !important;
+  }
+  
+  /***TABLE***/
+  table.dataTable {
+      border-collapse: collapse !important;
+  }
+  
+  thead > tr > th{
+      text-align: center;
+      color: var(--font-important-color);
+  }
+  
+  tbody > tr > td{
+      display: table-cell;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-size: 14px;
+  }
+  
+  tbody > tr > td:first-child{
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: var(--font-important-color);
+      font-weight: bold;
+  }
+  tbody > tr > td:first-child img{
+     height: 50px;
+     width: 50px;
+     border-radius: 50px;
+     margin-right: 10px;
+  }
+  tbody > tr > td:first-child > div{
+      font-size: 13px;
+  }
+  tbody > tr > td:first-child > div > p:first-child{
+      line-height: 1px;
+  }
+  
+  tbody > tr > td:nth-child(2){
+      color: var(--font-Important-color);
+  }
+  
+  tbody > tr > td:last-child{
+      font-size: 17px;
+      padding-top: 30px;
+  }
+  
+  tbody > tr > td:last-child > i:first-child{
+      margin-right: 20px;
+      color: var(--font-Important-color);
+      cursor: pointer;
+  } /* IL Y A UNE REPETITN A GEERE EN FAVEUR DU <a> */
+  tbody > tr > td:last-child > a:first-child{
+      margin-right: 20px;
+      color: var(--font-Important-color);
+      cursor: pointer;
+  }
+  tbody > tr > td:last-child > i:nth-child(2){
+      margin-right: 20px;
+      color: var(--font-important-color-red);
+      cursor: pointer;
+  }
+  /** PAGINATION**/
+  .dataTables_wrapper .row:last-child{
+      flex-wrap: nowrap;
+      margin: 0;
+  }
+  .dataTables_info{
+      text-align: center;
+  }
+  .dataTables_paginate{
+      display: flex;
+      justify-content: center;
+  }
+  .page-item.active .page-link {
+      color: var(--default-Blanc-color);
+      color: var(--font-Important-color);
+      background-color: var(--default-Blanc-color);
+      border-color: var(--font-Important-color);
+  }
+  .page-link {
+      color: var(--font-Important-color);
+  }
+  
+  
+  
+  /*OTHER FOR TABLE*/
+  table.dataTable thead .sorting_asc:after {
+      content: "";
+  }
+  table.dataTable thead .sorting:after {
+      opacity: 0.2;
+      content: "";
+  }
+  
+  
+  
+  

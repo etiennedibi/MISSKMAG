@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {{ style('AdminPublic/css/vendor/bootstrap') }}
+    {{ style('https://use.fontawesome.com/releases/v5.10.2/css/all.css') }}
+    {{ style('AdminPublic/css/style') }}
+    {{ style('AdminPublic/css/style6') }}
+
+    <title>ADMIN | Articles | Voir </title>
+</head>
+
+
+
+<body>
+    
+  <div class="contenai-fluid cover" style="
+  background: linear-gradient(90deg,rgba(109, 107, 107, 0.301),rgba(255, 255, 255, 0.637), rgb(255, 254, 254)), url({{assetsUrl(Article.illustrationImg1)}});
+  background-size: cover;
+  background-position: center;
+  ">
+    <div class="rightPart">
+        <i class="fas fa-arrow-left" id="returnToArtclePage"></i>
+        <img src="{{ assetsUrl(Article.user.ProfilIMG) }}" alt="">
+        <p>{{Article.user.firtname}}</p>
+    </div>
+
+    <div class="leftPart">
+        <p>categorie : {{Article.categorie.denomination}}</p>
+        <div class="ReadStat">
+            <span>530</span>Lectures
+        </div>
+        <p>Depuis le {{Article.created_at}}</p>
+    </div>
+  </div>
+
+
+  <div class="container articleContainer">
+    <h4>{{Article.title}}</h4>
+
+    <p>
+        {{Article.text}}
+    </p>
+  </div>
+
+
+
+
+{{ script('AdminPublic/js/script5') }}
+</body>
+</html>

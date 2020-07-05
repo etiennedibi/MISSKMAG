@@ -1,0 +1,227 @@
+@layout('ClientViews.app')
+
+@section('stylesheets')
+  {{ style('ClientPublic/css/advertising') }}
+@endsection
+
+
+@section('main')
+
+@set('title','Advertising')
+  
+
+     <!--
+        MAIN CONTAINER OF THE BODY ELEMENTS
+    -->
+    <main>
+        <div class="container-fluid container-sommary-carousel">
+            <div class="row ">
+                <div class="container-fluid sommary-carousel-block">
+                    <div class="row">
+                        <!-- CAROUSEL UNIQUE BLOCK -->
+                        <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                        <!-- BLOCK DE L'IMAGE -->
+                                        <div class="carousel-inner">
+
+                                            <!-- UN CAROUSEL -->
+                                            <div class="carousel-item active">
+                                                <img class="d-block" src="{{ assetsUrl('ClientPublic/assets/les-images/1532977167626.422.jpeg') }}">
+
+                                                <div class="carousel-caption-deux">
+                                                    <h6> ADVERTISING </h6>
+                                                </div>
+
+                                                <div class="carousel-caption">
+                                                    <h6> Know all on how you can have advertisings on our Website</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- ADVERTISING (EXPLICATION SUR LES PUBLICITES) BLOCK -->
+                        <div class="col-lg-6 col-md-5 advertising-block block-information">
+                            <h1>
+                                MAKE AN ADVERTISING
+                            </h1>
+
+                            <p>Comment organiser votre espace peut changer votre vie ! </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTAINER OF THE BODY -->
+        <div class="container-fluid container-body">
+            <div class="row row-body">
+
+                <!-- CATEGORIE 1 -->
+                <div class="col-12 categories-block">
+                    <div class="row">
+                        <div class="category-title">
+                            <h6> HAVE AN ADVERTISING'S SPACE ? </h6>
+                        </div>
+
+                        <div class="col-12 category-hr"></div>
+
+                        <!-- ARTICLES BLOCK -->
+                        <div class="col-12 block-articles firt-info">
+                            <p> Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu et personnaliser les polices. Déplacez-moi où vous le souhaitez sur votre page. Utilisez cet espace pour décrire votre activité. Présentez votre entreprise, vos services et vos équipes.
+                                C'est l'espace idéal pour présenter votre entreprise, vos services et vos équipes en détails. Utilisez cet espace pour décrire votre activité. Présentez votre équipe et les services proposés. Racontez l'histoire de votre entreprise et la raison pour laquelle elle a été crée. Expliquez à vos visiteurs vos motivations, vos objectifs et soulignez vos avantages par rapport à vos concurrents. 
+                                Démarquez-vous et captivez l'attention de vos visiteurs.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- HR DE SEPARATION DES BLOCKS -->
+                <div class="col-12">
+                    <hr>
+                </div>
+
+                <!-- CATEGORIE 2 -->
+                <div class="col-12 categories-block categories-block-2">
+                    <div class="row">
+
+                        <!-- ARTICLES BLOCK -->
+                        <div class="col-12 block-articles packages-block">
+                            <div class="row">
+                                <!-- ARTICLE -->
+                                <div class="article pack">
+                                    <h4> Package 1 </h4>
+                                    <h5> Home Page </h5>
+                                    <p> Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu et personnaliser les polices. </p>
+                                </div>
+
+                                <!-- ARTICLE -->
+                                <div class="article pack">
+                                    <h4> Package 2 </h4>
+                                    <h5> Categories </h5>
+                                    <p> Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu et personnaliser les polices. </p>
+                                </div>
+
+                                <!-- ARTICLE -->
+                                <div class="article pack create-space-down">
+                                    <h4> Package 3 </h4>
+                                    <h5> Vide Library </h5>
+                                    <p> Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu et personnaliser les polices. </p>
+                                </div>
+
+                                <!-- ARTICLE -->
+                                <div class="article pack create-space-down">
+                                    <h4> Package 4 </h4>
+                                    <h5> Article Reading </h5>
+                                    <p> Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu et personnaliser les polices. </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- HR DE SEPARATION DES BLOCKS -->
+                <div class="col-12">
+                    <hr>
+                </div>
+
+
+                 <!-- CONTAINER DU FORMULAIRE DES PUBLICATIONS -->
+                 <div class="col-12">
+                    <div class="row">
+
+                        <!-- TITRE FORMULAIRE -->
+                        <div class="col-12 form-advertising-title">
+                            <h3> Request an advertisement ! </h3>
+                        </div>
+
+                        <div class="col-12 form-advertising-block">
+                            <form>
+                                <div class="row">
+
+                                    <!-- NOM ENTREPRISE -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="companyName" placeholder="Company's Name">
+                                        </div>
+                                    </div>
+
+                                    <!-- SELECT PACKAGE -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <select class="custom-select" id="inlineFormCustomSelect">
+                                                <option selected>Choose a package</option>
+                                                <option value="1">Package 1</option>
+                                                <option value="2">Package 2</option>
+                                                <option value="3">Package 3</option>
+                                                <option value="4">Package 4</option>
+                                              </select>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- DUREE DE LA PUB -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="durationPub" placeholder="Duration (Ex : 2 month)">
+                                        </div>
+                                    </div>
+
+
+                                    <!-- INPUT FILE CUSTOMIZE -->
+                                    <div class="col-md-3 col-sm-6 input-file-block">
+                                        <div class="form-group">
+                                            <div class="input-file-container">  
+                                                <input class="input-file" id="my-file" type="file">
+                                                <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+                                            </div>
+                                            <p class="file-return"></p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- SUBMIT BUTTON -->
+                                    <div class="submit-but-block">
+                                        <button type="button" type="submit" class="btn btn-submitting"> Submitting </button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- HR DE SEPARATION DES BLOCKS -->
+                <div class="col-12">
+                    <hr>
+                </div>
+
+
+                <!-- COPYRIGHT BLOCK -->
+                <div class="col-12 copyright">
+                    <p> Copyright &copy; 2020. Conception by Selowiner Group</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+@endsection

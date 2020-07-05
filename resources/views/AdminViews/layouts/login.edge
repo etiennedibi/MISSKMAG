@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ style('AdminPublic/css/login.css') }}
+    <title>Admin | Login</title>
+</head>
+<body>
+
+    <div class="topBox"></div>
+
+    <div class="contentBox">
+    <form action="{{ route('LoginView') }}" method="post">
+    {{ csrfField() }}
+
+        <div class="formHeader">
+            <div class="logoContent">
+                <div class="logo"><img src="" alt=""></div>
+                <p>MissKMag</p>
+            </div>
+            <div class="contentTitle">
+                <p>Login</p>
+            </div>
+        </div>
+        <div class="formBody">
+            <h3 style="margin: 0;">Hey !!  Pigiste MissKMag</h3>
+            <p>Bienvenue dans votre espace d'edition</p>
+            <p>
+                @if(flashMessage('authentificated'))
+                <span style="color:red; font-weight:normal">{{flashMessage('authentificated')}}</span>
+                <br><br>
+                @elseif(flashMessage('sessionError'))
+                <span style="color:red; font-weight:normal">{{flashMessage('sessionError')}}</span>
+                <br><br>
+                @else
+                Connectez-vous en utilisant les accès qui vous ont été communiqués par
+                l'administrateur principal <br><br>
+                @endif
+                <!-- Cochez la case <span>remember</span> pour ne plus avoir à le refaire  -->
+            </p>
+
+            
+                <p>Votre E-mail</p>
+                <input type="email" name="email" id="" value="{{ old('email', '') }}">
+
+                <p class="secondInputP">Le Mot de Passe</p>
+                <input type="password" name="password" id="" value="">
+            
+        </div>
+        <div class="formFooter">
+            <p>Pour ne plus avoir à le refaire, cochez la case</p>
+            <p><input type="checkbox" name="remember" id="">remember</p>
+        </div>
+    </form>
+    </div>
+    
+
+    <script>
+        document.onkeypress = enter;
+        
+        function enter(e) {
+            console.log('yzeeee');
+            
+        if (e.which == 13) { sendform(); }
+        }
+
+        //Form to send
+        function sendform() {
+        document.forms[0].submit();
+        }
+    </script>
+</body>
+</html>

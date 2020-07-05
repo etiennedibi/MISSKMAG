@@ -1,0 +1,471 @@
+/*/
+  DEBUT DU CODE CSS AVEC LA BALISE BODY
+/*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    background: #FBFCFC;
+    overflow-x: hidden;
+    color: #424949;
+}
+
+.container-blc-body{margin-left: 50px; margin-right: 50px;}
+.container-sommary-carousel{padding-left: 65px; padding-right: 65px;}
+.row-body{padding-left: 50px; padding-right: 50px;}
+
+
+/*/
+  NAVBAR DE HAUT
+/*/
+
+.container-navbar-top {
+    border-top: 3px solid #CB4335;
+}
+
+.block-trending {
+    padding: 10px;
+    padding-left: 70px;
+    background: rgb(11, 13, 13);
+}
+
+.trending {
+    color: #CB4335;
+    font-size: 0.9rem;
+}
+
+.slide-text {
+    font-size: 0.8rem;
+    color: silver;
+}
+
+.container-elements {
+    padding: 20px;
+}
+
+.container-logo-webzine{
+    margin-left: 15px;
+}
+
+.logo-webzine {
+    background: #CB4335;
+    padding: 30px 25px 23px 30px ;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.logo-webzine>h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-items {
+    border-top: 3px solid #CB4335;
+    margin-top: 10px;
+    background: rgb(11, 13, 13);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #CB4335;
+}
+
+.nav-link-active {
+    color: #CB4335;
+}
+.dropdown-menu{
+    background: rgb(11, 13, 13);
+    margin-top: 9px;
+    margin-left: -30px;
+}
+.dropdown-item{
+    text-decoration: none;
+    color: silver;
+    font-size: 0.8rem;
+}
+
+.dropdown-item:hover{
+    background: #CB4335;
+    color: white;
+}
+
+.dropdown-divider{
+    border-color: silver;
+}
+
+
+/*/
+  CAROUSEL
+/*/
+
+.container-sommary-carousel {
+    margin-top: -10px;
+}
+
+.sommary-carousel-block {
+    padding-left: 21px;
+
+}
+
+.carousel-inner {
+    height: 65vh;
+}
+
+.carousel-item {
+    height: 65vh;
+}
+
+.carousel-caption {
+    width: 90%;
+    height: 45px;
+    margin-left: -10%;
+    background: rgb(11, 13, 13, .8);
+    border-bottom: 3px solid #CB4335;
+}
+
+.carousel-caption>h6 {
+    margin-top: -7px;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.carousel-caption-deux {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    background: #CB4335;
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px;
+    padding-top: 6px;
+    padding-bottom: 0px;
+}
+
+.carousel-caption-deux>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/*/
+  ADVERTISING
+/*/
+
+.advertising-block,
+.advertising-block-row {
+    padding: 0px;
+}
+
+.advert-picture {
+    height: 32.5vh;
+    margin-left: -3%;
+    width: 99.5%;
+}
+
+
+/*/
+  CONTAINER OF BODY
+/*/
+
+.container-body {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.category-title {
+    background: #CB4335;
+    color: white;
+    border-radius: 1px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+
+.category-title>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.category-hr {
+    background: #CB4335;
+    height: 3px;
+    margin-top: 5px;
+}
+
+.block-articles {
+    padding: 0px;
+    margin-top: 25px;
+    padding-right: 16px;
+}
+
+.article {
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.article>.p {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.article>.p:hover {
+    color: #CB4335;
+}
+
+.article-info>span {
+    color: #CB4335;
+}
+
+.categories-block-2 {
+    margin-top: 30px;
+}
+
+.copyright {
+    background: rgb(11, 13, 13);
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.copyright>p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-control {
+    padding-left: 2.375rem;
+}
+
+.input-search {
+    background: transparent;
+}
+
+.input-group-append {
+    background: #CB4335;
+    border-radius: 2px;
+}
+
+.page-link,
+.page-link:hover {
+    text-decoration: none;
+    color: #424949;
+    font-size: 0.8rem;
+}
+
+.sommary-carousel-block-lecture {
+    padding-right: 20px;
+}
+
+.article-author, .article-author-mobile {
+    background: rgb(11, 13, 13);
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-top: -5px;
+}
+
+.article-author-mobile{display: none;}
+
+.text-author {
+    color: silver;
+    text-align: center;
+    margin-top: 13px;
+}
+
+.text-author>h6 {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.text-author>p {
+    font-size: 0.75rem;
+}
+
+.share-article, .share-article-mobile {
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-top: 50px;
+}
+
+.share-article-mobile{
+    display: none; 
+    padding-left: 30px;
+    padding-right: 0px;
+}
+
+.btn {
+    font-size: 0.75rem;
+}
+
+.navbar-brand {
+    font-size: 0.8rem;
+}
+
+.coment-icon {
+    margin-top: 15px;
+}
+
+
+/*/
+    FULL RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN
+/*/
+
+
+/*/
+    ORDINATEUR DE PLUS DE 12.5 POUCES (LG)
+/*/
+
+@media only screen and (min-width: 1500px) {
+    .container-fluid{max-width: 1500px;}
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .sommary-carousel-block {
+        padding-left: 20px;
+        padding-right: 17px;
+    }
+
+    .funder-text {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .advert-picture {
+        width: 97%;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: -7px;
+    }
+
+
+}
+
+/*/
+    TABLETTES DE 10.33 POUCES MAXIMUM (MEDIUM)
+/*/
+
+@media only screen and (max-width: 991px) {
+
+    .block-trending {
+        padding-left: 35px;
+    }
+
+    .sommary-carousel-block {
+        padding-left: 20px;
+        padding-right: 25px;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.85rem;
+        margin-top: -4px;
+    }
+    .create-space-down {
+        margin-top: 35px;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel{padding-left: 15px; padding-right: 15px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .article-author{display: none;}
+
+    .article-author-mobile{display: block;}
+
+    .dropdown-menu{
+        margin-top: 9px;
+        margin-left: 0px;
+        margin-bottom: 9px;
+        width: 200px;
+        border: 1px solid silver;
+    }
+
+    
+}
+
+/*/
+    TABLETTES DE 8 POUCES MAXIMUM (SMALL)
+/*/
+
+@media only screen and (max-width: 768px) {
+
+    .block-trending {
+        padding-left: 10px;
+    }
+
+    .advertising-block {
+        display: none;
+    }
+
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-top: -4px;
+    }
+
+    .container-elements {
+        padding: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel, .sommary-carousel-block{padding-left: 0px; padding-right: 0px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .create-space-down {
+        margin-top: 0px;
+    }
+
+    .container-body {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .article-author-mobile{margin-left: 75px; margin-right: 60px; margin-top: 20px;}
+    
+    .share-article{display: none;}
+
+    .share-article-mobile{display: block;}
+
+}
+
+/*/
+    SMARTPHONE
+/*/
+
+@media only screen and (max-width: 576px) {
+    .slide-text {
+        font-size: 0.7rem;
+        color: silver;
+    }
+
+    .article-author-mobile{margin-left: 15px; margin-right: 0px; margin-top: 20px;}
+
+    .share-article-mobile{
+        padding-left: 15px;
+    }
+
+}

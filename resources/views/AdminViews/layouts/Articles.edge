@@ -1,0 +1,298 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+
+{{ style('AdminPublic/css/vendor/bootstrap') }}
+{{ style('AdminPublic/css/vendor/dataTables.bootstrap.min') }}
+{{ style('AdminPublic/css/style5') }}
+
+@endsection
+
+
+
+
+@section('main')
+@set('title','Articles')
+
+    
+<div class="AddArticleHeader">
+    <p>AJOUTER UN ARTICLE</p>
+    @if(auth.user.role_id == 2)
+    <div class="AddarticleButton">
+        <i class="fas fa-ad" ></i> new <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+    @else
+    <div class="AddCategorieButton">
+        <i class="fas fa-ad" ></i> Catégorie <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+    @endif
+   
+</div>
+
+
+
+@if(flashMessage('AddArticleFail'))
+    <div class="alert alert-danger" role="alert">{{flashMessage('AddArticleFail')}}</div>
+@endif
+
+@if(flashMessage('ArticlesuccessAdd'))
+    <div class="alert alert-success" role="alert">{{flashMessage('ArticlesuccessAdd')}}</div>
+@endif
+
+<div class="AddArticleContainer">
+    
+<form action="{{ route('addArticle') }}" method="post" enctype="multipart/form-data" id="addArticleForm">
+        {{ csrfField() }}
+
+        <div>
+            <div>
+                <p>Titre :</p><input type="text" name="title" id="">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('title'), hasErrorFor('title')) }}
+            </div>
+            <div>
+                <p>Categorie :</p>
+                <select name="categorie_id" id="">
+                    <option value="" selected></option>
+                    @each(categorie in categories)
+                    <option value="{{categorie.id}}">{{categorie.denomination}}</option>
+                    @endeach
+                </select>
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('categorie_id'), hasErrorFor('categorie_id')) }}
+            </div>
+        </div>
+        <div>
+            <div class="image1">
+                <input type="file" name="illustrationImg1" id="UploardInput1">
+                <i class="fas fa-file-image" id="UploardLogo1"></i>
+                <img src="" alt="" id="illustration1">
+            </div>
+            <div class="image1">
+                <input type="file" name="illustrationImg2" id="UploardInput2">
+                <i class="fas fa-file-image" id="UploardLogo2"></i>
+                <img src="" alt="" id="illustration2">
+            </div>
+            @if(flashMessage('notification'))
+                <p style="color:red; font-weight:normal ">* {{flashMessage('notification')}}</p>
+            @endif
+        </div>
+        <div class="text">
+            <p>Article :</p>
+            <textarea name="text">
+                Faites vous plaisir exprimez vous librement, et ne soyez surtout pas timide
+            </textarea>
+            {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('text'), hasErrorFor('text')) }}
+        </div>
+        <div><input type="submit" value="PUBLIER"></div>
+    <input type="hidden" name="user_id" value="{{ auth.user.id }}">
+    </form>
+
+</div>
+
+
+<div class="AddcategorieHeader">
+    <p>AJOUTER UNE CATEGORIE</p>
+    <div class="AddarticleButton">
+        <i class="fas fa-ad" ></i> Article <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+@if(flashMessage('AddCategoriesuccess'))
+    <div class="alert alert-success" role="alert">{{flashMessage('AddCategoriesuccess')}}</div>
+@endif
+
+@if(flashMessage('AddCategorieFail'))
+    <div class="alert alert-danger" role="alert">{{flashMessage('AddCategorieFail')}}</div>
+@endif
+
+@if(flashMessage('ArticlesuccessDeleted'))
+    <div class="alert alert-success" role="alert">{{flashMessage('ArticlesuccessDeleted')}}</div>
+@endif
+
+
+
+<div class="AddCategorieContainer">
+    
+<form action="{{ route('addCategorie') }}" method="post" id="addCategorieForm">
+        {{ csrfField() }}
+        <div>
+            <p>Nom :</p><input type="text" name="denomination" id="">
+        </div>
+        <div>
+            <input type="submit" value="AJOUTER">
+        </div>
+
+    </form>
+
+</div>
+
+
+
+<div class="bestReadHeader">
+    <p>LE PLUS LU</p>
+    <div class="bestReadPeriod">
+        <i class="fas fa-history"></i> Ce mois <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+@if(auth.user.role_id == 2)
+<div class="statisticsContainer" style="
+background: linear-gradient(180deg,rgba(255, 255, 255, 0.527),rgb(255, 255, 255)), url({{ assetsUrl(bestAuthorArticle[0].illustrationImg1) }});
+background-size: cover;
+background-position: center;
+">
+
+<div>
+    <img src="{{ assetsUrl(bestAuthorArticle[0].user.ProfilIMG) }}" alt="">
+    <p>{{bestAuthorArticle[0].created_at}}</p>
+</div> 
+
+<p>{{bestAuthorArticle[0].title}}</p>
+
+<div>
+    <div>
+        <img src="{{ assetsUrl('AdminPublic/image/icons/best.png') }}" alt="">
+        <p><span>{{bestAuthorArticle[0].viewNumber}}</span> lectures</p>
+    </div>
+</div>
+
+</div>
+@else
+<div class="statisticsContainer" style="
+background: linear-gradient(180deg,rgba(255, 255, 255, 0.527),rgb(255, 255, 255)), url({{ assetsUrl(bestArticle[0].illustrationImg1) }});
+background-size: cover;
+background-position: center;
+">
+
+<div>
+    <img src="{{ assetsUrl(bestArticle[0].user.ProfilIMG) }}" alt="">
+    <p>{{bestArticle[0].created_at}}</p>
+</div> 
+
+<p>{{bestArticle[0].title}}</p>
+
+<div>
+    <div>
+        <img src="{{ assetsUrl('AdminPublic/image/icons/best.png') }}" alt="">
+        <p><span>{{bestArticle[0].viewNumber}}</span> lectures</p>
+    </div>
+</div>
+
+</div>
+@endif
+
+
+
+
+
+
+
+<div class="listHeader">
+    <p>ARTICLES</p>
+    <div class="RegisterPeriod">
+        <i class="fas fa-history"></i> Depuis la création <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+
+<div class="listeContainer">
+
+    @if(auth.user.role_id == 2)
+
+        <div class="container TheList">
+            <table class="table  table-bordered mydatatable" style="width:98%">
+            <thead>
+                <tr>
+                    <th>VUES</th>
+                    <th>TITRE</th>
+                    <th>CATEGORIE</th>
+                    <th>DATE</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @each(Article in AllAuthorArticles)
+                
+                <tr>
+                    <td>
+                        <div><p>
+                            @if(Article.viewNumber == null)
+                                0 
+                            @else
+                                {{Article.viewNumber}}
+                            @endif 
+                            </p>
+                    </td>
+                    <td><p>{{Article.title}}</p></td>
+                    <td><p>{{Article.categorie.denomination}}</p></td>
+                    <td><p>{{Article.created_at}}</p></td>
+                    <td> 
+                        <a href="{{route('AdminArticleView', {id: Article.id})}}"><i class="fas fa-eye"></i></a>
+                        <i class="far fa-trash-alt" onclick="event.preventDefault(); document.getElementById('delete-article{{Article.id}}').submit()"></i>
+                        <form action="{{'/admin/article/delete/' + Article.id + '?_method=DELETE'}}" method="post" id="delete-article{{Article.id}}">{{ csrfField() }}</form>
+                    </td>
+                </tr>    
+
+                @endeach        
+            </tbody>
+            </table>
+        </div>
+
+
+    @else
+      
+        <div class="container TheList">
+            <table class="table  table-bordered mydatatable" style="width:98%">
+            <thead>
+                <tr>
+                    <th>AUTEUR</th>
+                    <th>TITRE</th>
+                    <th>CATEGORIE</th>
+                    <th>DATE</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @each(Article in AllArticles)
+                
+                <tr>
+                    <td>
+                        <div><p>{{Article.user.firtname}}</p>
+                    </td>
+                    <td><p>{{Article.title}}</p></td>
+                    <td><p>{{Article.categorie.denomination}}</p></td>
+                    <td><p>{{Article.created_at}}</p></td>
+                    <td> 
+                        <a href="{{route('AdminArticleView', {id: Article.id})}}"><i class="fas fa-eye"></i></a>
+                        <i class="far fa-trash-alt" onclick="event.preventDefault(); document.getElementById('delete-article{{Article.id}}').submit()"></i>
+                        <form action="{{'/admin/article/delete/' + Article.id + '?_method=DELETE'}}" method="post" id="delete-article{{Article.id}}">{{ csrfField() }}</form>
+                    </td>
+                </tr>    
+
+                @endeach        
+            </tbody>
+            </table>
+        </div>
+
+    @endif
+
+ 
+</div>
+
+
+
+
+
+@endsection
+
+@section('javascripts')
+{{ script('AdminPublic/js/vendor/popper.min') }}
+{{ script('AdminPublic/js/vendor/bootstrap.min') }}
+{{ script('AdminPublic/js/vendor/jquery.dataTables.min') }}
+{{ script('AdminPublic/js/vendor/dataTables.bootstrap4.min') }}
+
+{{ script('AdminPublic/js/script4') }}
+@endsection

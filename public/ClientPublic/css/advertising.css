@@ -1,0 +1,518 @@
+/*/
+  DEBUT DU CODE CSS AVEC LA BALISE BODY
+/*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    background: #FBFCFC;
+    overflow-x: hidden;
+    color: #424949;
+}
+
+.container-blc-body{margin-left: 50px; margin-right: 50px;}
+.container-sommary-carousel{padding-left: 65px; padding-right: 65px;}
+.row-body{padding-left: 50px; padding-right: 50px;}
+
+
+/*/
+  NAVBAR DE HAUT
+/*/
+
+.container-navbar-top {
+    border-top: 3px solid #CB4335;
+}
+
+.block-trending {
+    padding: 10px;
+    padding-left: 70px;
+    background: rgb(11, 13, 13);
+}
+
+.trending {
+    color: #CB4335;
+    font-size: 0.9rem;
+}
+
+.slide-text {
+    font-size: 0.8rem;
+    color: silver;
+}
+
+.container-elements {
+    padding: 20px;
+}
+
+.container-logo-webzine{
+    margin-left: 15px;
+}
+
+.logo-webzine {
+    background: #CB4335;
+    padding: 30px 25px 23px 30px ;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.logo-webzine>h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-items {
+    border-top: 3px solid #CB4335;
+    margin-top: 10px;
+    background: rgb(11, 13, 13);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #CB4335;
+}
+
+.nav-link-active {
+    color: #CB4335;
+}
+.dropdown-menu{
+    background: rgb(11, 13, 13);
+    margin-top: 9px;
+    margin-left: -30px;
+}
+.dropdown-item{
+    text-decoration: none;
+    color: silver;
+    font-size: 0.8rem;
+}
+
+.dropdown-item:hover{
+    background: #CB4335;
+    color: white;
+}
+
+.dropdown-divider{
+    border-color: silver;
+}
+
+
+/*/
+  CAROUSEL
+/*/
+
+.container-sommary-carousel {
+    margin-top: -10px;
+}
+
+.sommary-carousel-block {
+    padding-left: 0px;
+    margin-left: -9px;
+    padding-right: 27px;
+}
+
+.carousel-inner {
+    height: 65vh;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.carousel-item {
+    height: 65vh;
+}
+
+.carousel-caption {
+    width: 90%;
+    height: 45px;
+    z-index: 4;
+    margin-left: -10%;
+    background: rgb(11, 13, 13, .8);
+    border-left: 3px solid #CB4335;
+}
+
+.carousel-caption>h6 {
+    margin-top: -7px;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.carousel-caption-deux {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    background: #CB4335;
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px;
+    padding-top: 6px;
+    padding-bottom: 0px;
+}
+
+.carousel-caption-deux>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+
+/*/
+  ADVERTISING
+/*/
+
+.advertising-block,
+.advertising-block-row {
+    padding: 0px;
+}
+
+.block-information{
+    background: #CB4335;
+    color: white;
+    padding-top: 16vh;
+}
+
+.block-information > h1{font-size: 2.5rem; font-weight: bold; padding: 30px; text-align: center;}
+
+.block-information > p{font-size: 1.5rem; padding: 30px; padding-top: 0px; text-align: center;}
+
+
+/*/
+  CONTAINER OF BODY
+/*/
+
+.container-body {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.category-title {
+    background: #CB4335;
+    color: white;
+    border-radius: 1px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+
+.category-title>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.category-hr {
+    background: #CB4335;
+    height: 3px;
+    margin-top: 5px;
+}
+
+.block-articles {
+    padding: 0px;
+    margin-top: 25px;
+}
+
+.firt-info > p {text-align: left;}
+
+.packages-block {
+    padding: 0px;
+    padding-left: 15px;
+    margin-left: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.article {
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    background: rgb(11, 13, 13);
+    margin-right: 15px;
+    padding: 20px;
+    width: 23.5%;
+}
+
+
+.pack > h4, h5,p{text-align: center;}
+
+
+.categories-block-2 {
+    margin-top: 30px;
+}
+
+.copyright {
+    background: rgb(11, 13, 13);
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.copyright>p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/*/
+    AVERTISING FORM DIV
+/*/
+
+.form-advertising-title{
+    text-align: center;
+}
+
+.form-advertising-block{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.input-file-container {
+    position: relative;
+    width: 150px;
+  } 
+  .js .input-file-trigger {
+    display: block;
+    padding: 7px 20px;
+    background: #CB4335;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+  }
+  .js .input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 150px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+  }
+  .js .input-file:hover + .input-file-trigger,
+  .js .input-file:focus + .input-file-trigger,
+  .js .input-file-trigger:hover,
+  .js .input-file-trigger:focus {
+    background: #CB4335;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .file-return {
+    margin: 0;
+  }
+  .file-return:not(:empty) {
+    margin: 1em 0;
+  }
+  .js .file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+  }
+  .js .file-return:not(:empty):before {
+    content: "Selected file: ";
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .btn-submitting, .btn-submitting:hover{
+      background: #CB4335;
+      color: white;
+  }
+
+  .submit-but-block{
+      margin-left: 45%;
+      margin-top: 20px;
+  }
+
+
+/*/
+    FULL RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN
+/*/
+
+
+/*/
+    ORDINATEUR DE PLUS DE 12.5 POUCES (LG)
+/*/
+
+@media only screen and (min-width: 1500px) {
+    .container-fluid{max-width: 1500px;}
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.77rem;
+        margin-top: -4px;
+    }
+
+    .block-information > h1{font-size: 2.2rem;}
+    .block-information > p{font-size: 1.4rem;}
+
+    .packages-block {
+        padding-left: 15px;
+        margin-left: 10px;
+    }
+    
+    .article {
+        margin-right: 10px;
+        width: 23%;
+    }
+
+    .firt-info > p {font-size: 0.9rem;}
+}
+
+
+/*/
+    TABLETTES DE 10.33 POUCES MAXIMUM (MEDIUM)
+/*/
+
+@media only screen and (max-width: 992px) {
+
+    .block-trending {
+        padding-left: 35px;
+    }
+
+    .dropdown-menu{
+        margin-top: 9px;
+        margin-left: 0px;
+        margin-bottom: 9px;
+        width: 200px;
+        border: 1px solid silver;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.75rem;
+        margin-top: -4px;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel{padding-left: 15px; padding-right: 15px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .firt-info > p {font-size: 0.9rem;}
+
+    .packages-block {
+        padding-left: 15px;
+        margin-left: 10px;
+    }
+
+    .block-information{
+        padding-top: 13vh;
+    }
+    
+    .article {
+        margin-right: 10px;
+        width: 23%;
+    }
+
+   
+}
+
+
+/*/
+    TABLETTES DE 8 POUCES MAXIMUM (SMALL)
+/*/
+
+@media only screen and (max-width: 768px) {
+
+    .block-trending {
+        padding-left: 10px;
+    }
+
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-top: -4px;
+    }
+
+    .container-elements {
+        padding: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel, .sommary-carousel-block{padding-left: 0px; padding-right: 0px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .article {
+        font-size: 0.75rem;
+        margin-bottom: 35px;
+    }
+    .create-space-down {
+        margin-top: 0px;
+    }
+
+    .container-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .sommary-carousel-block {
+        padding-left: 0px;
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .carousel-inner {
+        margin-left: 1px;
+    }
+
+    .block-information{
+        padding-top: 5vh;
+    }
+
+    .packages-block {
+        padding-left: 15px;
+        margin-left: 10px;
+    }
+
+    .article {
+        margin-right: 0.5%;
+        width: 49%;
+    }
+
+    .firt-info > p {font-size: 0.9rem; padding: 0px 30px 0px 30px;}
+    
+
+
+}
+
+
+/*/
+    SMARTPHONE
+/*/
+
+@media only screen and (max-width: 576px) {
+    .slide-text {
+        font-size: 0.7rem;
+        color: silver;
+    }
+    .packages-block {
+        padding-left: 15px;
+        margin-left: 10px;
+    }
+
+    .article {
+        margin-right: 0%;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 60px;
+    }
+
+}

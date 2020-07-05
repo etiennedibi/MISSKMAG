@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root{
+    --Pricipal-background-light: #edeff2;
+    --Important-Background: #0fb269;
+    --navBar-Background-light: #dce1ee;
+    --principal-font:'Muli', sans-serif;
+    --font-Important-color: #5bd1c3;
+    --font-genral-color: #7b7c9f;
+    --font-important-color: #33335a;
+    --font-important-color-red: #f76363;
+    --default-Blanc-color:#ffffff;
+}
+
+*:focus{
+	outline: none;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-left:300px ;
+    padding-right: 50px;
+    box-sizing: border-box;
+    font-family: var(--principal-font);
+    background: var(--Pricipal-background-light);
+}
+
+/*** ELEMENT FOR SWUP TRANSITION    ***/
+
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
+  }
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }
+
+
+
+
+/*---------------------------------------*/
+/**+++++++++ NAVBAR STYLE [ THE LEFT NAVBAR ] +++++++++++++++*/
+/*---------------------------------------*/
+
+.navbarside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background: var( --navBar-Background-light);
+}
+.logoBox{
+    width: 100%;
+    height: 17vh;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-important-color);
+}
+.logo{
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background: var(--default-Blanc-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.logoBox span{
+    color: var(--font-Important-color);
+}
+
+.menu{
+    width: 100%;
+    height: 83vh;
+}
+.menuElement{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--font-genral-color);
+    
+}
+.menuElement_Acitve{
+    width: 85%;
+    padding-left: 20px;
+    justify-content: space-around;
+    background-color: #e5e9f2;
+    color: var(--font-Important-color);
+    border-radius: 0px 50px 50px 0px;
+}
+.menuElement:hover{
+    width: 85%;
+    padding-left: 20px;
+    justify-content: space-around;
+    background-color: #afb8c9;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.menuElement div{
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.menuElement i{
+    font-size: 20px;
+}
+.menuElement p{
+    margin-left: 20px;
+}
+.menuElement p a{
+    color: var(--font-genral-color);
+    text-decoration: none;
+}
+.menuElement_Acitve p a{
+    color: var(--font-Important-color);
+}
+
+
+
+
+
+/*---------------------------------------*/
+/**+++++++++ HEADER STYLE +++++++++++++++*/
+/*---------------------------------------*/
+
+.header{
+    height: 17vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tilte{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--font-important-color);
+}
+
+.notificationBox{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notificationBox i{
+    font-size: 25px;
+    color: var(--font-genral-color);
+}
+
+.addArticle{
+    height: 30px;
+    width: 30px;
+    background: var(--Important-Background);
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.addArticle i{
+    font-size: 10px;
+    color: var(--Pricipal-background-light);
+}
+
+.notifs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notifs p{
+    background: var(--font-important-color-red);
+    color: var(--default-Blanc-color);
+    height: 20px;
+    width: 20px;
+    margin-top: -15px;
+    margin-left: -10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilContainer{
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.profilBox{
+    height: 45px;
+    width: 45px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+.profilOption{
+    margin-top: 48px;
+    margin-left: -50px;
+    width: 150px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: none;
+}
+.profilOptionElement{
+    margin: 0;
+    background: var(--default-Blanc-color);
+    line-height: 40px;
+    text-align: center;
+}
+.profilBox:hover .profilOption{
+    display: block;
+}
+.profilOptionElement:hover{
+    background: var(--navBar-Background-light);
+}
+.profilBox:hover{
+    display: block;
+}
+
+
+
+
+
+/* LOGOUT FORM */
+
+#logOutForm{
+    position: absolute;
+    z-index: -99;
+}

@@ -1,0 +1,187 @@
+@layout('ClientViews.app')
+
+
+
+@section('main')
+
+@set('title','Category')
+  
+
+      <!--
+        MAIN CONTAINER OF THE BODY ELEMENTS
+    -->
+    <main>
+        <div class="container-fluid container-sommary-carousel">
+            <div class="row ">
+                <div class="container-fluid sommary-carousel-block">
+                    <div class="row ">
+                        <!-- CAROUSEL UNIQUE BLOCK -->
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+                                        <!-- BLOCK DE L'IMAGE -->
+                                        <div class="carousel-inner">
+
+                                            <!-- UN CAROUSEL -->
+                                            <div class="carousel-item active">
+                                                <img class="d-block" src="{{ assetsUrl(LasttArticle.illustrationImg1) }}">
+
+                                                <div class="carousel-caption-deux">
+                                                    <h6> {{LasttArticle.categorie.denomination}} </h6>
+                                                </div>
+
+                                                <div class="carousel-caption">
+                                                    <h6> {{LasttArticle.title}} </h6>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- ADVERTISING (PUBS) BLOCK -->
+                        <div class="col-lg-4 col-md-4 advertising-block">
+                            <div class="row advertising-block-row">
+                                @each(pubPoster in pubPosters)
+                                <div class="col-12">
+                                    <img src=" {{  assetsUrl(pubPoster.posterURL) }}" class="advert-picture">
+                                </div>
+                                @endeach
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTAINER OF THE BODY -->
+        <div class="container-fluid container-body">
+            <div class="row row-body">
+
+
+                <!-- INPUT DE RECHERCHE ET DE TRI DES ARTICLES -->
+                <div class="col-lg-8 col-md-8 col-xs-12 form-select-search">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 select-div">
+                                    <select class="form-control form-control-sm">
+                                        <option>Small select</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-8 serach-div">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm input-serach" placeholder="Search an article">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button">
+                                            <i class="fa fa-search"></i>
+                                          </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AFFICHAGE DE 8 ARTICLES DE LA CATEGORIE -->
+                <div class="col-12 categories-block">
+                    <div class="row">
+
+                        <!-- TITRE DE CATEGORIE-->
+                        <div class="category-title">
+                            <h6> ARTICLES </h6>
+                        </div>
+                        
+                        <div class="col-12 category-hr"></div>
+
+                        <!-- ARTICLES BLOCK -->
+                        <div class="col-12 block-articles">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <div class="row">
+
+                                        @each(AllArticle in AllArticles.data)
+                                         
+                                            
+                                            <!-- ARTICLE -->
+                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 article" style="margin-bottom: 60px">
+                                                <a class="a-article" href="{{ route('ArticleView', {id: AllArticle.id}) }}">
+                                                    <img src="{{ assetsUrl(AllArticle.illustrationImg1) }}" class="img-fluid">
+                                                    <p class="p"> {{ AllArticle.title }} </p>
+                                                    <p class="article-info"> By <span>{{ AllArticle.user.firtname }}</span> {{ AllArticle.created_at}}</p>
+                                                </a>
+                                            </div>
+                                            
+                                          
+                                        @endeach
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PAGINATION BLOCK -->
+                <div class="col-lg-8 col-sm-12 col-xs-12 pagination-div">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ AllArticles.lastPage - 1 }}"  aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+          
+                            @each(page in paginationLinks(AllArticles.lastPage))
+                            <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                            @endeach
+
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ AllArticles.lastPage + 1 }}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <!-- COPYRIGHT BLOCK -->
+                <div class="col-12 copyright">
+                    <p> Copyright &copy; 2020. Conception by Selowiner Group</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+@endsection

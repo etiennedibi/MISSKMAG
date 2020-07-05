@@ -1,0 +1,690 @@
+/*/
+  DEBUT DU CODE CSS AVEC LA BALISE BODY
+/*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    background: #FBFCFC;
+    overflow-x: hidden;
+    color: #424949;
+}
+
+.container-blc-body{margin-left: 50px; margin-right: 50px;}
+.container-sommary-carousel{padding-left: 65px; padding-right: 65px;}
+.row-body{padding-left: 50px; padding-right: 50px;}
+
+
+/*/
+  NAVBAR DE HAUT
+/*/
+
+.container-navbar-top {
+    border-top: 3px solid #CB4335;
+}
+
+.block-trending {
+    padding: 10px;
+    padding-left: 70px;
+    background: rgb(11, 13, 13);
+}
+
+.trending {
+    color: #CB4335;
+    font-size: 0.9rem;
+}
+
+.slide-text {
+    font-size: 0.8rem;
+    color: silver;
+}
+
+.container-elements {
+    padding: 20px;
+}
+
+.container-logo-webzine{
+    margin-left: 15px;
+}
+
+.logo-webzine {
+    background: #CB4335;
+    padding: 30px 25px 23px 30px ;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.logo-webzine>h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-items {
+    border-top: 3px solid #CB4335;
+    margin-top: 10px;
+    background: rgb(11, 13, 13);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #CB4335;
+}
+
+.nav-link-active {
+    color: #CB4335;
+}
+.dropdown-menu{
+    background: rgb(11, 13, 13);
+    margin-top: 9px;
+    margin-left: -30px;
+}
+.dropdown-item{
+    text-decoration: none;
+    color: silver;
+    font-size: 0.8rem;
+}
+
+.dropdown-item:hover{
+    background: #CB4335;
+    color: white;
+}
+
+.dropdown-divider{
+    border-color: silver;
+}
+
+
+/*/
+  CAROUSEL
+/*/
+
+.container-sommary-carousel {
+    margin-top: -10px;
+}
+
+.sommary-carousel-block {
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+.carousel-inner {
+    height: 60vh;
+    cursor: pointer;
+}
+
+.carousel-item {
+    height: 60vh;
+}
+
+.carousel-caption {
+    width: 90%;
+    height: 45px;
+    z-index: 4;
+    margin-left: -10%;
+    background: rgb(11, 13, 13, .8);
+    border-left: 3px solid #CB4335;
+}
+
+.carousel-caption>h6 {
+    margin-top: -7px;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.carousel-caption-deux {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    background: #CB4335;
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px;
+    padding-top: 6px;
+    padding-bottom: 0px;
+}
+
+.carousel-caption-deux>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+
+/*/
+  ADVERTISING
+/*/
+
+.advertising-block,
+.advertising-block-row {
+    padding: 0px;
+}
+
+.advert-picture {
+    height: 30vh;
+    margin-left: -3%;
+    width: 97%;
+}
+
+
+/*/
+  CONTAINER OF BODY
+/*/
+
+.container-body {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.category-title {
+    background: #CB4335;
+    color: white;
+    border-radius: 1px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+
+.category-title>h6 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.category-hr {
+    background: #CB4335;
+    height: 3px;
+    margin-top: 5px;
+}
+
+.block-articles {
+    padding: 0px;
+    margin-top: 25px;
+}
+
+.article {
+    font-size: 0.8rem;
+    cursor: pointer;
+   /* margin-bottom: 60px;  AJOUT DU DEV BACK-END */
+}
+
+.a-article,
+.a-article:hover {
+    text-decoration: none;
+    color: #424949;
+}
+
+.article>a>.p,
+.article>.p {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.article>a>.p:hover,
+.article>.p:hover {
+    color: #CB4335;
+}
+
+.article-info>span {
+    color: #CB4335;
+}
+
+.categories-block-2 {
+    margin-top: 30px;
+}
+
+.video {
+    color: white
+}
+
+.image-video {
+    z-index: 3;
+}
+
+.icon-video {
+    z-index: 10;
+    position: absolute;
+    left: 40%;
+    top: 22%;
+}
+
+.copyright {
+    background: rgb(11, 13, 13);
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.copyright>p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-select-search {
+    margin-left: 17%;
+}
+
+.select-div>.form-control {
+    background: transparent;
+}
+
+.form-control {
+    padding-left: 2.375rem;
+}
+
+.input-serach {
+    background: transparent;
+}
+
+.input-group-append {
+    background: #CB4335;
+    border-radius: 2px;
+}
+
+.block-down {
+    margin-top: 40px;
+}
+
+.pagination-div {
+    margin-left: 28%;
+    margin-top: 15px;
+}
+
+.page-link,
+.page-link:hover {
+    text-decoration: none;
+    color: #424949;
+    font-size: 0.8rem;
+}
+
+.icon-video-reportage {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    z-index: 10;
+}
+
+.caption-reportage {
+    border-left: none;
+    border-bottom: 3px solid #CB4335;
+}
+
+.pagination-video {
+    margin-top: 30px;
+}
+
+.sommary-carousel-block-lecture {
+    padding-right: 20px;
+}
+
+.row-blog-info {
+    margin-top: -30px
+}
+
+.container-words {
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.img-author {
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.funder-name {
+    text-align: center;
+}
+
+.funder-name>h6 {
+    color: #CB4335;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.funder-name>p {
+    font-size: 0.8rem;
+    margin-top: -5px;
+}
+
+.funder-text {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.title-right {
+    position: relative;
+    left: 83%
+}
+
+.display-mobile{display: none;}
+
+.div-top {
+    margin-top: 30px;
+}
+
+.cover-transaparent-of-the-page {
+    height: 100vh;
+    background: rgba(18, 18, 19, .9);
+    position: fixed;
+    top: 0px;
+    z-index: 15;
+    display: none;
+    cursor: pointer;
+}
+
+.container-video-preview {
+    background: white;
+    padding: 10px;
+    padding-bottom: 5px;
+    position: fixed;
+    left: 17%;
+    top: 15vh;
+    z-index: 20;
+    border-radius: 3px;
+    display: none;
+}
+
+iframe {
+    height: 70vh;
+}
+
+.block-information{
+    background: #CB4335;
+}
+
+
+/*/
+  CONTAINER NEWSLETTER ET MESSAGE
+/*/
+
+.newsletter-block{
+    position: fixed;
+    bottom: 7vh;
+    right: 3px;
+    cursor: pointer;
+}
+
+
+.icon-close{
+    border-radius: 50px;
+    margin-left: 5px;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.container-form-newsletter{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: #FBFCFC;
+    border-radius: 5px;
+    display: inline-block;
+    z-index: 30;
+    height: 450px;
+    margin: 1rem;
+    position: fixed;
+    right: 3px;
+    bottom: 35px;
+    padding: 0px !important;
+    text-decoration: center;
+    width: 330px;
+    display: none;
+}
+
+.container-form-newsletter > div {
+    text-align: center;
+}
+
+.form-control {
+    background: transparent;
+}
+
+.text-form, .text-form-hide{
+    font-size: 0.8rem;
+    text-decoration: center;
+    padding: 15px 20px 20px 15px;
+}
+
+.input-group-form-newsletter, .input-group-form-message{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input-group-append {
+    border-radius: 3px;
+}
+
+.btn-sub, .btn-sub:hover {
+    color: white;
+}
+
+.sub-message-container{
+    margin-left: 53px;
+
+}
+
+.sub-message{
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.sub-suscrib{
+    margin-top: 15px;
+    padding-left: 60px;
+}
+
+.btn-send, .btn-send:hover{
+    background: #CB4335;
+    color: white;
+}
+
+
+.or-div{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/*/
+    ELEMENT DE LA DIV DE LA NEWSLETTER
+/*/
+/* .suscribe-newsletter-hide, .text-form, .input-group-form-newsletter {
+    display:;
+} */
+
+/*/
+    ELEMENT DE LA DIV  DES MESSAGE
+/*/
+.send-message-title-hide, .text-form-hide, .input-group-form-message, .suscrib-newsletter-div {
+    display: none;
+}
+
+
+/*/
+    FULL RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN --- RESPONSIVE DESIGN
+/*/
+
+
+/*/
+    ORDINATEUR DE PLUS DE 12.5 POUCES (LG)
+/*/
+
+@media only screen and (min-width: 1500px) {
+    .container-fluid{max-width: 1500px;}
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .sommary-carousel-block {
+        padding-left: 20px;
+        padding-right: 17px;
+    }
+
+    .funder-text {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+}
+
+
+/*/
+    TABLETTES DE 10.33 POUCES MAXIMUM (MEDIUM)
+/*/
+
+@media only screen and (max-width: 992px) {
+
+    .block-trending {
+        padding-left: 35px;
+    }
+
+    .dropdown-menu{
+        margin-top: 9px;
+        margin-left: 0px;
+        margin-bottom: 9px;
+        width: 200px;
+        border: 1px solid silver;
+    }
+
+    .sommary-carousel-block {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.85rem;
+        margin-top: -4px;
+    }
+    .create-space-down {
+        margin-top: 35px;
+    }
+
+    .icon-video {
+        left: 42%;
+        top: 30%;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel{padding-left: 15px; padding-right: 15px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .pagination-div {
+        margin-left: 23%;
+        margin-top: 15px;
+    }
+
+    .form-select-search {
+        margin-bottom: 20px;
+    }
+
+    .funder-text {
+        font-size: 0.8rem;
+        margin-top: 10px;
+        text-align: left;
+    }
+}
+
+
+/*/
+    TABLETTES DE 8 POUCES MAXIMUM (SMALL)
+/*/
+
+@media only screen and (max-width: 768px) {
+
+    .block-trending {
+        padding-left: 10px;
+    }
+
+    .advertising-block {
+        display: none;
+    }
+
+    .logo-webzine>h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .carousel-caption>h6 {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-top: -4px;
+    }
+
+    .container-elements {
+        padding: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .container-blc-body{margin-left: 0px; margin-right: 0px;}
+    .container-sommary-carousel, .sommary-carousel-block{padding-left: 0px; padding-right: 0px;}
+    .row-body{padding-left: 0px; padding-right: 0px;}
+
+    .article {
+        font-size: 0.75rem;
+        margin-bottom: 35px;
+    }
+    .create-space-down {
+        margin-top: 0px;
+    }
+
+    .icon-video {
+        left: 45%;
+        top: 35%;
+    }
+
+    .container-body {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .container-video-preview {
+        left: 9%;
+    }
+
+    .pagination-div {
+        margin-left: 15%;
+        margin-top: 15px;
+    }
+
+    .form-select-search {
+        margin-left: 0%;
+        margin-bottom: 25px;
+    }
+
+    .display-mobile{display: block;}
+    .title-right, .text-right{display: none;}
+
+
+}
+
+
+/*/
+    SMARTPHONE
+/*/
+
+@media only screen and (max-width: 576px) {
+    .slide-text {
+        font-size: 0.7rem;
+        color: silver;
+    }
+
+    .container-video-preview {
+        left: 0%;
+    }
+
+    .pagination-div {
+        margin-top: 15px;
+    }
+
+}

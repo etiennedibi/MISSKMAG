@@ -1,0 +1,284 @@
+/* @import url(style.css); */
+
+
+.statisticsHeader{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var( --font-genral-color);
+}
+.stastPeriod{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var( --font-important-color);
+}
+.statisticsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.stat{
+    height: 170px;
+    width: 280px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.stat1{
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0.836), rgb(255, 255, 255), rgb(255, 255, 255)), url(../image/photos/nouveau-concept-pour-page-destination_52683-20167.jpg);
+    background-size: cover;
+    background-position:bottom;
+}
+.stat2{
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0.815), rgb(255, 255, 255),rgb(255, 255, 255)), url(../image/photos/concept-actualite-pour-page-destination_52683-18629.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.stat3{
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0.815), rgb(255, 255, 255), rgb(255, 255, 255)), url(../image/photos/illustration-personnes-travaillant-ensemble_52683-22181.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.statTilte{
+    color: var( --font-genral-color);
+    display: flex;
+    justify-content: space-between;
+}
+.statCircle1{
+    height: 10px;
+    width: 10px;
+    margin-top: 6px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.statCircle2{
+    height: 10px;
+    width: 10px;
+    margin-top: 6px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+}
+.statCircle3{
+    height: 10px;
+    width: 10px;
+    margin-top: 6px;
+    border: 2px solid pink;
+    border-radius: 10px;
+}
+.statNumber{
+    display: flex;
+    justify-content: space-around;
+}
+.statNumber p:first-child{
+    margin-top: 5px;
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--font-important-color);
+}
+.statNumber p:last-child{
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: var( --font-genral-color);
+}
+.statNumber p:last-child span{
+    color: var(--font-Important-color);
+}
+.statNumber .indice{
+    font-size: 13px;
+}
+
+
+
+
+
+
+.OtherContainBox{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rightBox{
+    width: 430px;
+}
+.PolularVideo{
+    height: 260px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background: linear-gradient(#3131587a, #313158), url(../image/photos/concept-marketing-video-direct-ligne_12892-37.jpg);
+    color: white;
+    background-position: center;
+    background-size: cover; */
+    cursor: pointer;
+}
+.PolularVideo img{
+    height: 100px;
+    width: 120px;
+    margin-top: 70px;
+}
+.recentAuthors{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+.author{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background: white;
+    color: var(--font-genral-color);
+    cursor: pointer;
+}
+.AuthorTitle{
+    color: var(--font-genral-color);
+    margin-top: 50px;
+    margin-bottom: -20px;
+}
+.author img{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+.addAuthor{
+    background: var(--Important-Background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.othersAuthor{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.recentMail{
+    width: 500px;
+    height: 395px;
+    padding: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+}
+.recentMailHeader{
+    color: var(--font-genral-color);
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recentAdminMessage{
+    height: 50%;
+    padding-top: 90px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--font-genral-color);
+}
+
+.oneMail{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.oneMail > p{
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--font-important-color);
+}
+
+.mailInfoBox{
+    height: 100%;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MailIMG{
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  var( --Pricipal-background-light);
+}
+.MailIMG img{
+    height: 25px;
+    width: 25px;
+}
+.mailText{
+    line-height: 5px;
+}
+.mailText p:first-child{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--font-important-color);
+}
+.mailText p:last-child{
+    font-size: 12.5px;
+    color: var(--font-genral-color);
+}
+.mailText > p > span{
+    color: var(--font-important-color-red);
+}
+.oneMail2 .mailText > p > span{
+    color: var(--font-Important-color);
+}
+.oneMail3 .mailText > p > span{
+    color: rgb(197, 165, 21);
+}
+
+.moreMail{
+    margin: 20px 0px;
+    background: var( --Pricipal-background-light);
+    color: var(--font-important-color);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1350px){
+    .OtherContainBox{
+        width: 100%;
+        margin: 20px 0px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+

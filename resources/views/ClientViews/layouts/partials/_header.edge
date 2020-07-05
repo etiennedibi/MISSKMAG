@@ -1,0 +1,133 @@
+ <!--
+        HEADER CONTAINER ALL NAVBARS
+    -->
+    <header>
+        <!-- CONTAINER DES DEUX NAVBAR ET DU LOGO -->
+        <div class="container-fluid container-navbar-top">
+
+
+
+            <!-- PREMIERE NAVBAR AVEC LES INFORMATION DU TRENDING -->
+            <div class="row block-trending">
+                <span class="trending"> TRENDING : </span>
+                <span class="slide-text"> 
+                    &nbsp; Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.
+                </span>
+            </div>
+
+
+
+            <!-- BLOCK NAVBAR ET LOGO -->
+            <div class="row row-container-element">
+                <div class="container-fluid container-blc-body container-elements">
+                    <div class="row">
+
+                        <!-- LOGO CONTAINER -->
+                        <div class="container-logo-webzine">
+                            <div class="logo-webzine">
+                                <h1> MISS <span> K MAG </span> </h1>
+                            </div>
+                        </div>
+
+
+                        <!-- NAVBAR DE NAVIGATION -->
+                        <div class="col-12 container-navbar">
+                            <nav class="navbar navbar-items navbar-expand-lg">
+
+
+                                <!-- le bouton toggle du menu mobile qui est caché sur les grands écrans debut-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <img src="assets/les-logos/588a64e7d06f6719692a2d11.png" height="30">
+                                <!-- le bouton toggle du menu mobile qui est caché sur les grands écrans fin-->
+                                </button>
+
+                               
+
+                                <!-- MENU DE NAVIGATION -->
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mr-auto">
+                                        
+                                        @if(title == 'Home')
+                                        <li class="nav-item active">
+                                            <a class="nav-link nav-link-active" href="{{ route ('HomeView')}}"> Home </a>
+                                        </li>
+                                        @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route ('HomeView')}}"> Home </a>
+                                        </li>
+                                        @endif
+
+
+                                        @if(title == 'Category' || title == 'Category | article' )
+                                        <li class="nav-item active dropdown">
+                                            <a class="nav-link nav-link-active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Categories </a>
+                                        @else
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Categories </a>
+                                        @endif
+
+                                            <div class="dropdown-menu">
+                                                @each(categories in listCategorie)
+                                                    @if($loop.last)
+                                                    <a class="dropdown-item" href="{{ route('CategorieView', {id: categories.categorie.id})}}">{{categories.categorie.denomination}}</a>
+                                                    @else
+                                                    <a class="dropdown-item" href="{{ route('CategorieView', {id: categories.categorie.id})}}">{{categories.categorie.denomination}}</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    @endif
+                                               @endeach
+                                            </div>
+                                        </li>
+
+
+
+                                        @if(title == 'Vidéo library')
+                                        <li class="nav-item active">
+                                            <a class="nav-link nav-link-active" href="{{ route('VideoView')}}"> Video Library </a>
+                                        </li>
+                                        @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('VideoView')}}"> Video Library </a>
+                                        </li>
+                                        @endif
+
+
+
+                                        @if(title == 'Advertising')
+                                        <li class="nav-item active">
+                                            <a class="nav-link nav-link-active" href="{{ route('AdversitingView')}}">Advertising</a>
+                                        </li>
+                                        @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('AdversitingView')}}">Advertising</a>
+                                        </li>
+                                        @endif
+
+
+
+                                        @if(title == 'About')
+                                        <li class="nav-item active">
+                                            <a class="nav-link nav-link-active" href="{{ route('AboutView')}}">About</a>
+                                        </li>
+                                        @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('AboutView')}}">About</a>
+                                        </li>
+                                        @endif
+                                    </ul>
+
+
+                                    <!-- CHOIX DE LANGUES A L'EXTREME DROIT -->
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <span> <a href=""><img src="{{ assetsUrl('ClientPublic/assets/les-logos/unitedkingdome-.jpg') }}" height="16"></a> </span> &nbsp;&nbsp;&nbsp;
+                                        <span> <a href=""><img src="{{ assetsUrl('ClientPublic/assets/les-logos/1280px-Flag_of_France.svg.png') }}" height="16"></a> </span>
+                                    </form>
+
+                                </div>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

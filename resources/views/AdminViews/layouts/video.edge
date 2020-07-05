@@ -1,0 +1,122 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+  {{ style('AdminPublic/css/vendor/bootstrap') }}
+  {{ style('AdminPublic/css/vendor/dataTables.bootstrap.min') }}
+  {{ style('AdminPublic/css/style4') }}
+@endsection
+
+
+@section('main')
+@set('title','Video')
+
+
+
+
+
+
+<div class="AddAuthorContainer">
+@if(flashMessage('successAdd'))
+    <div class="alert alert-success" role="alert">{{flashMessage('successAdd')}}</div>
+@endif
+
+@if(flashMessage('AddFail'))
+    <div class="alert alert-danger" role="alert">{{flashMessage('AddFail')}}</div>
+@endif
+
+<form action="{{route('addVideo')}}" method="post" enctype="multipart/form-data" id="addForm">
+    {{ csrfField() }}
+
+        <div>
+             <div class="image1">
+                 
+                 <i class="fas fa-file-image" id="UploardLogo1"></i>
+                 <img src="" alt="" id="illustration1">
+             </div>
+             {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('PosterImG'), hasErrorFor('PosterImG')) }}
+        </div>
+         <div>
+             <div>
+                 <p>Lien :</p><input type="text" name="link" id="">
+                 {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('link'), hasErrorFor('link')) }}
+                </div>
+             <div>
+                 <p>Titre :</p><input type="text" name="title" id="">
+                 {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('title'), hasErrorFor('title')) }}
+            </div>
+         </div>
+         <div><input type="submit" value="AJOUTER"><input type="file" name="PosterImG" id="UploardInput1"></div>
+        <input type="hidden" name="user_id" value="{{auth.user.id}}">
+    </form>
+
+</div>
+
+
+
+
+
+
+<div class="listHeader">
+    <p>LISTE DES VIDEOS</p>
+    <div class="RegisterPeriod">
+        <i class="fas fa-history"></i> Depuis la création <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+<div class="listeContainer">
+
+    <div class="container TheList">
+        <table class="table  table-bordered mydatatable" style="width:98%">
+        <thead>
+            <tr>
+                <th>Auteur</th>
+                <th>Titre</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @each(Video in allVideos)
+            <tr>
+                <td>
+                    <img src="{{ assetsUrl(Video.user.ProfilIMG) }}" alt="">
+                    <div><p>{{ Video.user.firtname }}</p></div>  
+                </td>
+                <td><p>{{ Video.title }}</p></td>
+                <td><p>{{ Video.created_at }}</p></td>
+                <td><i class="far fa-trash-alt"></i></td>
+            </tr>
+            @endeach
+        </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@endsection
+
+
+
+@section('javascripts')
+{{ script('AdminPublic/js/vendor/popper.min') }}
+{{ script('AdminPublic/js/vendor/bootstrap.min') }}
+{{ script('AdminPublic/js/vendor/jquery.dataTables.min') }}
+{{ script('AdminPublic/js/vendor/dataTables.bootstrap4.min') }}
+
+{{ script('AdminPublic/js/script3') }}
+@endsection

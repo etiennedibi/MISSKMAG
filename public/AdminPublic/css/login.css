@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*:focus{
+	outline: none;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    background: #0f030129;
+    font-size: 12px;
+}
+
+.topBox{
+    height: 40vh;
+    background: linear-gradient(#0f0301d6, #0f0301d4), url('../image/photos/woman-holding-tomatoes-3213283.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.contentBox{
+    background: transparent;
+    height: 450px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: -125px;
+}
+
+.formHeader{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logoContent{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 100px;
+}
+.logoContent p{
+    font-size: 18px;
+}
+.contentTitle{
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formBody{
+    background: white;
+    border-radius: 10px;
+    height: 300px;
+    text-align: center;
+    padding: 0 50px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    color: #1b0602;
+}
+
+input{
+    margin-top: -50px;
+    height: 30px;
+    width: 250px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    border-bottom: solid #1b0602a6 2px;
+}
+
+.secondInputP{
+    margin-top: 25px;
+}
+
+.formFooter{
+    text-align: center;
+    color: #1b0602;
+}
+.formFooter p:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.formFooter input{
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    margin-right: 5px;
+}

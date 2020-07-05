@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<!--
+    INFORMATIONS 1:
+    VOICI LE MODELE DE COMMENTAIRE POUR TOUT LE SITE EST CELUI DANS LEQUEL J'ECRIS CE TEXTE
+
+  -->
+
+<!-- INFORMATIONS 2: les petites annonces seront affichées comme cela -->
+
+
+<!------------------------------------------------------------------------------------------------------->
+<!--   INFORMATIONS 3 : ET VOICI LE MODELE DES COMMENTAIRES MARQUANT DES REQUÊTES VERS LA DATABASE     -->
+<!-------------------------------------------------------------------------------------------------------->
+
+
+
+<head>
+    <!--
+		LES BALISES METAS
+	-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Selowiner Group for Miss K">
+
+
+    
+
+
+
+    
+    <!--
+		LES BALISES DE STYLES (LIENS BOOTSTRAP 4, LE LIEN CSS DE LA PAGE ET POLICE DE CARACTERE DE GOOGLE FONT EN LIGNE)
+    -->
+    {{ style('ClientPublic/css/bootstrap.min') }}
+    {{ style('ClientPublic/css/style') }}
+
+    @!section('stylesheets') 
+
+    <!--
+		FAVICON LOGO DE N'GBOADÔ
+	-->
+    <link rel="icon" type="image/png" href="">
+
+    <!--
+		TITRE DE LA PAGE
+	-->
+    <title> {{ title }} </title>
+</head>
+
+
+
+
+<body>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0"></script>
+  
+
+   @include('ClientViews.layouts.partials._header')
+
+
+   @!section('main')
+
+
+   @include('ClientViews.layouts.partials._newsletter')
+
+
+   
+
+{{ script('ClientPublic/js/jquery-3.3.1.min') }}
+{{ script('ClientPublic/js/bootstrap.min') }}
+{{ script('ClientPublic/js/universelScript') }}
+
+@!section('javascripts') 
+</body>
+
+
+
+
+
+</html>

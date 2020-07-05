@@ -1,0 +1,132 @@
+<!-- ************************************************** -->
+    <!-- **********START// COMMUN PART OF EACH PAGE********** -->
+    <!-- **********START// COMMUN PART OF EACH PAGE********** -->
+    <!-- ************************************************** -->
+
+
+    
+    <!-- **********COMMUN NAVBAR PART********** -->
+    <!-- ************************************** -->
+
+
+    @if(auth.user.role_id == 2)
+    <div class="navbarside">
+        <div class="logoBox">
+            <div class="logo"><img src="image/logo/logoMissKMag.png" alt=""></div>
+            <p>Miss K<span> .Mag</span></p>
+        </div>
+
+        <div class="menu">
+            <div class="menuElement {{ request.match(['/admin/Dashboad']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-align-left"></i>
+                    <p><a href="{{ route ('AdminDashboad')}}">Dashboard</a></p>
+                </div>
+            </div>
+            <div class="menuElement {{ request.match(['/admin/articles']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-file-signature"></i>
+                    <p><a href="{{ route ('articleAdminView')}}">Articles</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @else
+      <div class="navbarside">
+        <div class="logoBox">
+            <div class="logo"><img src="image/logo/logoMissKMag.png" alt=""></div>
+            <p>Miss K<span> .Mag</span></p>
+        </div>
+
+        <div class="menu">
+            <div class="menuElement {{ request.match(['/admin/Dashboad']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-align-left"></i>
+                    <p><a href="{{ route ('AdminDashboad')}}">Dashboard</a></p>
+                </div>
+            </div>
+            <div class="menuElement {{ request.match(['/admin/articles']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-file-signature"></i>
+                    <p><a href="{{ route ('articleAdminView')}}">Articles</a></p>
+                </div>
+            </div>
+            <div class="menuElement {{ request.match(['/admin/video']) ? 'menuElement_Acitve' : ''}}">
+                <div>
+                    <i class="far fa-file-video"></i>
+                    <p><a href="{{ route ('VideoAdmin')}}">Vidéos</a></p>
+                </div>
+            </div>
+            <div class="menuElement {{ request.match(['/admin/pub']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-ad"></i>
+                    <p><a href="{{ route ('PubAdmin')}}">Publicité</a></p>
+                </div>
+            </div>
+            <div class="menuElement">
+                <div>
+                    <i class="far fa-envelope"></i>
+                    <p><a href="#">Mail</a></p>
+                </div>
+            </div>
+            <div class="menuElement {{ request.match(['/admin/authors']) ? 'menuElement_Acitve' : '' }}">
+                <div>
+                    <i class="fas fa-user-friends"></i>
+                    <p><a href="{{ route ('AdminAuthorView')}}">Auteurs</a></p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    @endif
+
+    
+    <!-- **********COMMUN HEADER PART********** -->
+    <!-- ************************************** -->
+
+    <div class="header">
+        <p class="tilte">{{title}}</p>
+
+        <div class="notificationBox">
+            @if(title == 'Articles' || title == 'Authors')
+            <div class="addArticle"><i class="fas fa-plus"></i></div>     
+            @endif
+
+            @if(auth.user.role_id == 2)
+            <i class="fas fa-toggle-off lightMode" {{ tilte == 'Dashboard' ? 'style="margin-left:120px"' : '' }}></i>
+            <i class="fas fa-toggle-on dackMode" {{ tilte == 'Dashboard' ? 'style="margin-left:120px"' : '' }}></i>
+            @else
+            <i class="fas fa-star" style="color:rgb(221, 208, 192);"></i>
+            <i class="fas fa-toggle-off lightMode"></i>
+            <i class="fas fa-toggle-on dackMode"></i>
+            <div class="notifs"> <i class="far fa-bell"></i> <p>4</p> </div>
+            @endif
+
+            <div class="profilContainer">
+                <div class="profilBox" style=" 
+                background: url('{{assetsUrl(auth.user.ProfilIMG)}}');
+                background-size: cover;
+                background-position: center;"
+                >
+                    <div class="profilOption">
+                    <p class="profilOptionElement"><a href="{{route('ProfilView')}}" style="color:inherit">{{auth.user.firtname}} {{auth.user.lastname}}</a></p>
+                        <p class="profilOptionElement" id="logOutButton"><b>Déconnexion</b></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <form id="logOutForm" action="{{route('logout')}}" method="post">
+        {{ csrfField() }}
+    </form>
+    
+    <!-- ************************************************** -->
+    <!-- **********END// COMMUN PART OF EACH PAGE********** -->
+    <!-- **********END// COMMUN PART OF EACH PAGE********** -->
+    <!-- ************************************************** -->

@@ -1,0 +1,156 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+  {{ style('AdminPublic/css/style1') }}
+@endsection
+
+
+
+
+@section('main')
+@set('title','Dashboard')
+  
+<div class="statisticsHeader">
+    <p>STATISTIQUES</p>
+    <div class="stastPeriod">
+        <i class="fas fa-history"></i> Ce mois <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+<div class="statisticsContainer">
+
+    <div class="stat stat1">
+       <div class="statTilte"><p>NOMBRE DE VISITE DU SITE</p><p class="statCircle1"></p></div>
+       <div class="statNumber">
+        @if(siteViewNumber == 0)
+           <p>0<span class="indice">vst</span> </p>
+           @else
+           <p> {{siteViewNumber}} <span class="indice">vst</span> </p>
+        @endif
+           <p> <span>+40%</span> <br> mois <br> precedent</p>
+        </div>
+    </div>
+
+    <div class="stat stat2">
+        <div class="statTilte"><p>NOMBRE D'ARICLE PUBLIE</p><p class="statCircle2"></p></div>
+        <div class="statNumber">
+            <p> {{ArticleNumber}} <span class="indice">text</span> </p>
+            <p> <span>-10%</span> <br> mois <br> precedent</p>
+         </div>
+    </div>
+
+    <div class="stat stat3">
+        <div class="statTilte"><p>NOMBRE DE VIDEO PUBLIES</p><p class="statCircle3"></p></div>
+        <div class="statNumber">
+           <p> {{VideoNumber}} <span class="indice">mp4</span> </p>
+           <p> <span>+40%</span> <br> mois <br> precedent</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="OtherContainBox">
+
+    <div class="rightBox">
+
+        <div class="PolularVideo" style="
+            background: linear-gradient(#3131587a, #313158), url({{ assetsUrl(recentVideo.PosterImG) }});
+            color: white;
+            background-position: center;
+            background-size: cover;
+        ">
+            <a target="blank" href="{{recentVideo.link}}"><img src=" {{ assetsUrl('AdminPublic/image/icons/logo.png') }}" alt=""></a>
+            <p>VIDEO POPULAIRE</p>
+        </div>
+
+        <p class="AuthorTitle">AUTEURS DU MOIS</p>
+        <div class="recentAuthors">
+            <div class="author addAuthor"> <i class="fas fa-user-plus"></i> </div>
+            <div class="author"><img src="image/photos/52370759_2583095178431240_2293911066079395840_n - Copie.jpg" alt=""></div>
+            <div class="author"><img src="image/photos/1532977167626.422 - Copie.jpeg" alt=""></div>
+            <div class="author"><img src="image/photos/pexels-photo-1222271.jpeg" alt=""></div>
+            <div class="author othersAuthor">+10 autres</div>
+        </div>
+
+    </div>
+
+    <div class="recentMail">
+
+        @if(auth.user.role_id == 2)
+        <!--<div class="recentMailHeader"><p style="margin:0 auto">MESSAGE DE L'ADMIN</p></div>-->
+        
+        <div class="recentAdminMessage">
+            <P><span style="color:var(--font-important-color); font-weight:bold">  🕶  HEUREUX</span><br><br> de vous savoir dans note avre à production <span style="color:var(--font-Important-color); font-weight:bold">{{auth.user.firtname}}</span></P>
+            <p>Nous comptons sur votre savoir faire 🙏🙏 et vous souhaitons d'être le meilleur des pigistes  <span style="color:var(--font-important-color-red); font-weight:bold">Miss K Mag</span><br><br> 😉</p>
+        </div>
+       
+
+      
+        @else
+        <div class="recentMailHeader"><p>MESSAGES RECENT</p> <i class="fas fa-ellipsis-h"></i></div>
+        
+        <div class="oneMail">
+            <div class="mailInfoBox">
+                <div class="MailIMG"> <img src="image/icons/ads.png" alt=""> </div>
+                <div class="mailText">
+                    <p>Serv Einsteign Goup - maketing</p>
+                    <p><span>Publicité</span> 31 Juin 2019, 11:30 PM</p>
+                </div>
+            </div>
+            <p>12 MAILS</p>
+        </div>
+
+        <div class="oneMail oneMail2">
+            <div class="mailInfoBox">
+                <div class="MailIMG"> <img src="image/icons/email-marketing.png" alt=""> </div>
+                <div class="mailText">
+                    <p>ryu@icore.core - suscribe</p>
+                    <p><span>Newsletter</span> 31 Juin 2019, 11:30 PM</p>
+                </div>
+            </div>
+            <p>01 MAIL</p>
+        </div>
+
+        <div class="oneMail oneMail3">
+            <div class="mailInfoBox">
+                <div class="MailIMG"> <img src="image/icons/question.png" alt=""> </div>
+                <div class="mailText">
+                    <p>William Dio - information</p>
+                    <p><span>Info/Qest</span> 31 Juin 2019, 11:30 PM</p>
+                </div>
+            </div>
+            <p>05 MAIL</p>
+        </div>
+
+        <div class="oneMail oneMail2">
+            <div class="mailInfoBox">
+                <div class="MailIMG"> <img src="image/icons/email-marketing.png" alt=""> </div>
+                <div class="mailText">
+                    <p>ryu@icore.core - suscribe</p>
+                    <p><span>Newsletter</span> 31 Juin 2019, 11:30 PM</p>
+                </div>
+            </div>
+            <p>01 MAIL</p>
+        </div>
+
+       <div class="moreMail"> Voir plus </div>
+        @endif
+
+
+
+    </div>
+    
+    
+
+
+</div>
+
+
+
+
+@endsection

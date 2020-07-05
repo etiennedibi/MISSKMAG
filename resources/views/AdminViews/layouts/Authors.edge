@@ -1,0 +1,223 @@
+@layout('AdminViews.app')
+
+
+@section('stylesheets')
+{{ style('AdminPublic/css/vendor/bootstrap') }}
+{{ style('AdminPublic/css/vendor/dataTables.bootstrap.min') }}
+{{ style('AdminPublic/css/style3') }}
+@endsection
+
+
+
+
+@section('main')
+@set('title','Authors')
+
+
+
+<div class="AddAuthorHeader">
+    <p>AJOUTER UN AUTEUR</p>
+    <div class="AddAuthorPeriod">
+        <i class="fas fa-ad"></i> New <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+@if(flashMessage('successAdd'))
+    <div class="alert alert-success" role="alert">{{flashMessage('successAdd')}}</div>
+@endif
+
+@if(flashMessage('AddFail'))
+    <div class="alert alert-danger" role="alert">{{flashMessage('AddFail')}}</div>
+@endif
+
+<div class="AddAuthorContainer">
+    
+<form action="{{ route('signUp')}}" method="post" enctype="multipart/form-data" id="addForm">
+    {{ csrfField() }}
+        
+        <div class="forTheProfilIMG">
+            <img src="{{assetsUrl('AdminPublic/image/icons/user.png')}}"  alt="" class="profileAdd">
+            {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('ProfilIMG'), hasErrorFor('ProfilIMG')) }}
+        </div>
+        <div>
+            <div>
+                <p>Nom :</p><input type="text" name="lastname" id="" value="{{ old('lastname', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('lastname'), hasErrorFor('lastname')) }}
+            </div>
+            <div>
+                <p>Prenoms :</p><input type="text" name="firtname" id="" value="{{ old('firtname', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('firtname'), hasErrorFor('firtname')) }}
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>Pays :</p><input type="text" name="country" id="" value="{{ old('country', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('country'), hasErrorFor('country')) }}
+            </div>
+            <div>
+                <p>Ville :</p><input type="text" name="city" id="" value="{{ old('city', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('city'), hasErrorFor('city')) }}
+            </div>
+            <div>
+                <p>Age :</p><input type="number" name="age" id="" value="{{ old('age', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('age'), hasErrorFor('age')) }}
+            </div>
+            <div>
+                <p>Role :</p>
+                  <select id="role" name="role_id">
+                    <option value="2">Author</option>
+                    <option value="1">Admin</option>
+                  </select>
+                <span></span>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>E-mail :</p><input type="email" name="email" id="" value="{{ old('email', '') }}">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('email'), hasErrorFor('email')) }}
+            </div>
+            <div style="position:absolute; z-index:-10">
+                <p>Mot de Passe :</p><input type="password" name="password" id="PassCodeBoot" value="">
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('password'), hasErrorFor('password')) }}
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>Description :</p>
+                <textarea name="description" id="" cols="30" rows="10" value="{{ old('description', '') }}"></textarea>
+                {{ elIf('<p style="color:red; font-weight:normal ">* $self</p>', getErrorFor('description'), hasErrorFor('description')) }}
+            </div>
+        </div>
+        <div>
+            <input type="file" name="ProfilIMG" id="file">
+            <input type="submit" value="AJOUTER">
+        </div>
+    </form>
+
+</div>
+
+
+
+
+
+<div class="statisticsHeader">
+    <p>ONT ECRIT</p>
+    <div class="stastPeriod">
+        <i class="fas fa-history"></i> Ce mois <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+<div class="statisticsContainer">
+
+    @each(moreActiveUser in allMoreActive)
+        <div class="WAuthor">
+            <div class="authorBoxTitle">
+                <p class="statCircle2"></p> 
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div><img src="{{assetsUrl(moreActiveUser.user.ProfilIMG)}}" alt=""><p>{{moreActiveUser.moreActiveArticle}}</p></div>
+            <p>{{moreActiveUser.user.firtname}}</p>
+            <p>{{moreActiveUser.user.email}}</p>
+        </div>
+    @endeach
+
+</div>
+
+
+
+
+
+<div class="listHeader">
+    <p>LISTE DES AUTEURS</p>
+    <div class="RegisterPeriod">
+        <i class="fas fa-history"></i> Depuis la création <!--<i class="fas fa-sort-down"></i>-->
+    </div>
+</div>
+
+
+<div class="listeContainer">
+
+    <div class="container TheList">
+        <table class="table  table-bordered mydatatable" style="width:98%">
+        <thead>
+            <tr>
+                <th>Auteur</th>
+                <th>E-mail personnel</th>
+                <th>Articles</th>
+                <th>Pays</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @each(user in users)
+            <tr>
+                <td>
+                    <img src="{{ assetsUrl(user.ProfilIMG) }}" alt="">
+                    <div><p>{{user.firtname}}</p> <p>{{user.lastname}}</p></div>  
+                </td>
+                <td><p>{{user.email}}</p></td>
+                <td><p>#{{user.article.length}}</p></td>
+                <td><p>{{user.country}}</p></td>
+                <td><i class="fas fa-eye viewProfil" data-adminProfilButton="{{user.id}}"></i><i class="far fa-trash-alt"></i></td>
+            </tr>  
+            @endeach
+        </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+@each(user in users)
+<div class="authorProfilViewer ProfilViewer{{user.id}}">
+    <div class="ActivityBox">
+
+        <i class="far fa-times-circle closeViewer{{user.id}}"></i>
+       
+        <img src="{{ assetsUrl(user.ProfilIMG) }}" alt="">
+        <p>{{user.firtname}}</p>
+        <h4>{{user.lastname}}</h4>
+        <p>
+            {{user.description}}
+        </p>
+        <div class="ProfilStat">
+            <div>
+                <img src="{{assetsUrl('AdminPublic/image/icons/cinema.png')}}" alt="">
+                <p><span>{{user.article.length}}</span> articles</p>
+            </div>
+            <div>
+                <img src="{{assetsUrl('AdminPublic/image/icons/cinema.png')}}" alt="">
+                <p><span>{{user.video.length}}</span> Vidéos</p>
+            </div>
+            <div>
+                <img src="{{assetsUrl('AdminPublic/image/icons/best.png')}}" alt="">
+                <p><span>A</span> Best</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+@endeach
+
+
+
+
+
+
+@endsection
+
+
+
+@section('javascripts')
+{{ script('AdminPublic/js/vendor/popper.min') }}
+{{ script('AdminPublic/js/vendor/bootstrap.min') }}
+{{ script('AdminPublic/js/vendor/jquery.dataTables.min') }}
+{{ script('AdminPublic/js/vendor/dataTables.bootstrap4.min') }}
+
+{{ script('AdminPublic/js/script1') }}
+@endsection

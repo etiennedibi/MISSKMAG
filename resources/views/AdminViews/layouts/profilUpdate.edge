@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ style('AdminPublic/css/style7.css') }}
+    <title>Admin | profil | update</title>
+</head>
+<body>
+
+<form action="/admin/authors/profilUpdate?_method=PUT" method="post" enctype="multipart/form-data">
+        {{ csrfField() }}
+
+        <div class="covertop">
+            <img src="{{ assetsUrl(auth.user.ProfilIMG) }}" alt="" class="profileAdd">
+            <input type="file" name="ProfilIMG" id="file" >
+        </div>
+
+        <div class="contentBox">
+            <div class="leftContent">
+                <h3>Description</h3>
+                <textarea name="" id=""> {{auth.user.description}} </textarea>
+            </div>
+            <div class="rightContent">
+                <h3>Informations personnelles</h3>
+                @if(flashMessage('authentificated'))
+                <span style="color:red; font-weight:normal">{{flashMessage('authentificated')}}</span>
+                @endif
+                <div>
+                    <div><input type="text" name="firtname" id="" placeholder="Nom" value="{{auth.user.firtname}}"></div>
+                    <div><input type="text" name="lastname" id="" placeholder="Prenoms" value="{{auth.user.lastname}}"></div>
+                </div>
+                <div>
+                    <div><input type="text" name="country" id="" placeholder="Pays" value="{{auth.user.country}}"></div>
+                    <div><input type="text" name="city" id="" placeholder="Ville" value="{{auth.user.city}}"></div>
+                    <div><input type="number" name="age" id="" placeholder="Age" value="{{auth.user.age}}"></div>
+                </div>
+                <div>
+                    <div><input type="email" name="email" id="" placeholder="e-mail" value="{{auth.user.email}}"></div>
+                    <div><input type="password" name="password" id="" placeholder="Mot de passe"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   {{ script('AdminPublic/js/vendor/jquery-3.3.1.min') }}
+   <script>
+
+    $(document).ready(function () {
+        $('.profileAdd').click(function() {
+            $('#file').click()
+        })
+    })
+    
+
+       // FOR PREVIEW
+        const inputFile = document.querySelector("#file")
+        const imagePreview = document.querySelector(".profileAdd")
+
+
+        inputFile.addEventListener("change", function () {
+            const theFile = this.files[0];
+
+            if (theFile) {
+                const reader = new FileReader();
+                
+                reader.addEventListener("load", function() {
+                    imagePreview.setAttribute("src", this.result);
+                })
+
+                reader.readAsDataURL(theFile);
+
+            } else {
+                imagePreview.setAttribute("src", "");
+            }
+        })
+
+
+
+
+
+    // FOR FORM SENDING
+        document.onkeypress = enter;
+        
+        function enter(e) {
+            console.log('yzeeee');
+            
+        if (e.which == 13) { sendform(); }
+        }
+
+        //Form to send
+        function sendform() {
+        document.forms[0].submit();
+        }
+   </script> 
+</body>
+</html>

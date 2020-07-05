@@ -1,0 +1,253 @@
+/* @import url(style.css); */
+
+
+.addPubHeader{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var( --font-genral-color);
+}
+.addPubPeriod{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--default-Blanc-color);
+    border-radius: 8px;
+    width: 65px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var( --font-important-color);
+}
+
+
+.addPubBox{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    width: 100%;
+}
+.pagePubBox{
+    width: 470px;
+    height: 350px;
+    margin-bottom: 20px;
+    background: var(--default-Blanc-color);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.87),rgb(255, 255, 255)), url(../image/photos/3125018.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.pagePubBox1{
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.87),rgb(255, 255, 255)), url(../image/photos/concept-actualite-pour-page-destination_52683-18629.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.pagePubBox2{
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.87),rgb(255, 255, 255)), url(../image/photos/ONLINE-ADVERTISING-AGENCY.png);
+    background-size: cover;
+    background-position: center top;
+}
+.pagePubBox3{
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.87),rgb(255, 255, 255)), url(../image/photos/nouveau-concept-pour-page-destination_52683-20167.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.pagePubBox > h3{
+    margin-bottom: -5px;
+}
+.pagePubBox > img{
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.pagePubBox form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    cursor: pointer;
+    color: var(--font-Important-color);
+}
+.pagePubBox input[type="text"]{
+    width: 200px;
+    height: 2px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    color: var(--font-genral-color);
+}
+.pagePubBox input[type="file"]{
+    width: 60px;
+    border: 1px solid #dee2e6;
+    position: absolute;
+    z-index: -10;
+}
+.pagePubBox input[type="button"]{
+    width: 60px;
+    border: none;
+    border-radius: 6px;
+}
+.pagePubBox input[type="image"]{
+    width: 25px;
+    height: 25px;
+}
+.pagePubBox i{
+    font-size: 37px;
+}
+
+
+
+
+
+
+.RegisterPeriod{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--default-Blanc-color);
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var( --font-important-color);
+}
+/*------------*/
+/* DATA TABLE */
+/*------------*/
+.listeContainer > div,
+*::before,
+*::after{
+    box-sizing: border-box !important;
+}
+
+.listeContainer{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.TheList{
+    background: var(--default-Blanc-color);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: var( --font-genral-color);
+}
+.dataTables_wrapper .row:first-child{
+    flex-wrap: nowrap !important;
+    align-items: center;
+    margin: 0;
+}
+.dataTables_length{
+    text-align: center;
+}
+.dataTables_filter{
+    text-align: center !important;
+}
+
+/***TABLE***/
+table.dataTable {
+    border-collapse: collapse !important;
+}
+
+thead > tr > th{
+    text-align: center;
+    color: var(--font-important-color);
+}
+
+tbody > tr > td{
+    display: table-cell;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+tbody > tr > td:first-child{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--font-important-color);
+    font-weight: bold;
+}
+tbody > tr > td:first-child img{
+   height: 100px;
+   width: 250px;
+   border-radius: 10px;
+   /*margin-right: 10px;*/
+}
+tbody > tr > td:first-child > div > p:first-child{
+    line-height: 1px;
+}
+
+tbody > tr > td:nth-child(2){
+    color: var(--font-Important-color);
+}
+
+tbody > tr > td:last-child{
+    font-size: 17px;
+    padding-top: 30px;
+}
+
+tbody > tr > td:last-child > i:first-child{
+    margin-right: 20px;
+    color: var(--font-Important-color);
+    cursor: pointer;
+} /* IL Y A UNE REPETITN A GEERE EN FAVEUR DU <a> */
+tbody > tr > td:last-child > a:first-child{
+    margin-right: 20px;
+    color: var(--font-Important-color);
+    cursor: pointer;
+}
+tbody > tr > td:last-child > i:last-child{
+    margin-right: 20px;
+    color: var(--font-important-color-red);
+    cursor: pointer;
+}
+
+/** PAGINATION**/
+.dataTables_wrapper .row:last-child{
+    flex-wrap: nowrap;
+    margin: 0;
+}
+.dataTables_info{
+    text-align: center;
+}
+.dataTables_paginate{
+    display: flex;
+    justify-content: center;
+}
+.page-item.active .page-link {
+    color: var(--default-Blanc-color);
+    color: var(--font-Important-color);
+    background-color: var(--default-Blanc-color);
+    border-color: var(--font-Important-color);
+}
+.page-link {
+    color: var(--font-Important-color);
+}
+
+
+
+/*OTHER FOR TABLE*/
+table.dataTable thead .sorting_asc:after {
+    content: "";
+}
+table.dataTable thead .sorting:after {
+    opacity: 0.2;
+    content: "";
+}
